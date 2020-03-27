@@ -1,0 +1,49 @@
+platform :ios do
+  desc "Run tests on the example project"
+  lane :test do
+    scan(workspace: "./Example/delighted.xcworkspace", device: "iPhone 6")
+  end
+
+  desc "Bumps delighted.podspec and Version.swift"
+  lane :bump do
+    version = get_version
+    UI.important("Current version: #{version}")
+    new_version = UI.input("New version?")
+
+    files = ['../delighted.podspec', '../delighted/Classes/Version.swift']
+    files.each do |file|
+      text = File.read(file)
+      new_contents = text.gsub(/#{version}/, new_version)
+      File.open(file, "w") {|file| file.puts new_contents }
+    end
+  end
+
+  desc "Makes new GitHub release from master"
+  lane :release do
+    ensure_git_branch(branch: "master")
+    ensure_git_status_clean
+
+    version = get_version
+    UI.important("Version: #{version}")
+
+    changelog = prompt(
+      text: "Changelog: ",
+      multi_line_end_keyword: "END"
+    )
+
+    github_release = set_github_release(
+      name: version,
+      tag_name: version,
+      description: changelog,
+      commitish: "master"
+    )
+  end
+
+  desc "Gets latest version from delighted.podspec"
+  private_lane :get_version do 
+    fastlane_require 'cocoapods'
+    spec_file = "../delighted.podspec"
+    spec = Pod::Specification.from_file(spec_file)
+    spec.version.to_s
+  end
+end

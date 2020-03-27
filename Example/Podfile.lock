@@ -1,0 +1,23 @@
+PODS:
+  - delighted (1.0.0):
+    - Starscream (~> 3.1.1)
+  - Starscream (3.1.1)
+
+DEPENDENCIES:
+  - delighted (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Starscream
+
+EXTERNAL SOURCES:
+  delighted:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  delighted: e8118120b3ef99617b58501e676d767ca8f106f0
+  Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
+
+PODFILE CHECKSUM: ebc30eefdc9cab184f36e65fcc87401877b94cbb
+
+COCOAPODS: 1.8.4
