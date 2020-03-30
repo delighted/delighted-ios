@@ -1,7 +1,7 @@
 # coding: utf-8
 
 Pod::Spec.new do |spec|
-  spec.name                  = "delighted"
+  spec.name                  = "Delighted"
   spec.version               = "1.0.1"
   spec.summary               = "Delighted uses the Net Promoter System® to gather real feedback from your customers"
   spec.description           = <<~DESC
