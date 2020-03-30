@@ -35,7 +35,7 @@ source "https://github.com/CocoaPods/Specs.git"
 platform :ios, "11.0"
 use_frameworks!
 
-pod "delighted" ~> "1.0.1"
+pod "Delighted", "~> 1.0.1"
 ```
 
 Then run:
