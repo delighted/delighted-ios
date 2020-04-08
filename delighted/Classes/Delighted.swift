@@ -13,6 +13,8 @@ import UIKit
     /// New window that the survey will be displayed in
     internal static var window: UIWindow?
     
+    internal static var surveying = false
+    
     @objc public static weak var delegate: DelightedDelegate?
     
     public typealias SurveyCallback = (Status) -> ()
@@ -81,10 +83,11 @@ import UIKit
         RequestCache.retryAll()
         
         // Only display if another survey is not being displayed
-        guard Delighted.window == nil else {
+        guard !Delighted.surveying else {
             Logger.log(.warn, "Cannot request survey - another survey window is already open")
             return
         }
+        Delighted.surveying = true
         
         let preSurveySession = PreSurveySession(
             delightedID: delightedID,
@@ -106,6 +109,7 @@ import UIKit
             )
         }) { (failedReason) in
             Logger.log(.debug, "Failed client side eligibility at step \(failedReason)")
+            Delighted.surveying = false
             callback?(.failedClientEligibility(failedReason))
         }
     }
@@ -140,6 +144,7 @@ import UIKit
         preSurveySession.sendRequest(route: route, completion: { (data, response) in
             DispatchQueue.main.async {
                 guard let data = data else {
+                    Delighted.surveying = false
                     preSurveySession.callback?(.error(APIError.noResponse))
                     return
                 }
@@ -155,12 +160,14 @@ import UIKit
 
                     showSurvey(preSurveySession: preSurveySession, surveyRequest: surveyRequest, configuration: configuration, inViewController: userViewController)
                 } catch {
+                    Delighted.surveying = false
                     preSurveySession.callback?(.error(APIError.responseDecodeFailure))
                     Logger.log(.error, "Could not decode survey request \(error)")
                 }
             }
         }) { (error) in
             DispatchQueue.main.async {
+                Delighted.surveying = false
                 preSurveySession.callback?(.error(error))
             }
         }

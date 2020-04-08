@@ -145,11 +145,13 @@ class DelightedPageViewController: UIPageViewController {
             }) { (_) in
                 // Releases the window
                 Delighted.window = nil
+                Delighted.surveying = false
                 completion?()
             }
         } else {
             // Releases the window
             Delighted.window = nil
+            Delighted.surveying = false
             completion?()
         }
     }
