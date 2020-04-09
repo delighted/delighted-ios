@@ -431,7 +431,7 @@ limit.
 
 ## Support
 
-Please contact the [Delighted Concierge](mailto:hello@delighted.com?subject=Question about Delighted's iOS SDK)
+Please contact the [Delighted Concierge](mailto:hello@delighted.com?subject=Question%20about%20Delighted%27s%20iOS%20SDK)
 team with any questions or to report an issue.
 
 ## Example App
