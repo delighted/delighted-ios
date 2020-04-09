@@ -429,6 +429,11 @@ your survey. When your account exceeds its plan limits the survey won’t appear
 in your iOS app until the next billing period or you switch to a plan with a higher
 limit.
 
+## Support
+
+Please contact the [Delighted Concierge](mailto:hello@delighted.com?subject=Question about Delighted's iOS SDK)
+team with any questions or to report an issue.
+
 ## Example App
 
 The Example App included in the SDK shows examples of each type of survey as
