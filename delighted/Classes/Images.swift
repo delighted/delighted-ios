@@ -19,7 +19,9 @@ enum Images: String {
     case thumbsDown = "thumbs_down"
     
     var image: UIImage? {
-        let bundle = Bundle(for: ImagesClassForBundle.self)
+        let mainbundle = Bundle(for: ImagesClassForBundle.self)
+        //Name of Bundle assets can be found in Delighted.podspec
+        let bundle = Bundle(path: mainbundle.bundlePath + "/Delighted.bundle")
         let image = UIImage(named: rawValue, in: bundle, compatibleWith: nil)
         return image
     }
