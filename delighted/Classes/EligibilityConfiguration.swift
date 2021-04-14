@@ -5,8 +5,8 @@ struct EligibilityConfiguration {
     let enabled: Bool
     let minSurveyInterval: Int
     let sampleFactor: Float
-    var recurringSurveyPeriod: Int
-    var initialSurveyDelay: Int
+    var recurringSurveyPeriod: Int?
+    var initialSurveyDelay: Int?
     let forceDisplay: Bool
     let planLimitExhausted: Bool
 }

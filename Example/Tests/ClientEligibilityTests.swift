@@ -430,4 +430,38 @@ class ClientEligibilityTests: XCTestCase {
         
         waitForExpectations(timeout: 0.3, handler: nil)
     }
+
+    func testFailWithRecurringSurveyDisabled() {
+        // Set up a person that was previously surveyed
+        let dateAnHourAgo = Date().addingTimeInterval(-61)
+        let eligibility = ClientEligibility(preSurveySession: preSurveySession)
+        let defaults = eligibility.getDefaults(with: configuration)
+        eligibility.setFirstSeenDate(defaults: defaults, date: dateAnHourAgo)
+        eligibility.setLastSurveyedDate(defaults: defaults, date: dateAnHourAgo)
+
+        let configuration = EligibilityConfiguration(
+            surveyContextId: "",
+            enabled: true,
+            minSurveyInterval: 60,
+            sampleFactor: 1,
+            recurringSurveyPeriod: nil,
+            initialSurveyDelay: 0,
+            forceDisplay: false,
+            planLimitExhausted: false
+        )
+
+        let failExpectation = expectation(description: "Fail")
+        eligibility.doClientSideCheck(eligibilityConfiguration: configuration, passed: {
+
+        }) { (failedReason) in
+            if case ClientEligibility.FailedReason.recurringSurveyDisabled = failedReason {
+                // Success
+            } else {
+                XCTFail("wrong error")
+            }
+            failExpectation.fulfill()
+        }
+
+        waitForExpectations(timeout: 0.3, handler: nil)
+    }
 }
