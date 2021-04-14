@@ -5,7 +5,7 @@ internal struct ClientEligibility {
     typealias EligibilityCheckFailure = (FailedReason) -> ()
     
     internal enum FailedReason: Error {
-        case cannotGetConfiguration, enabled, exhausted, initialDelay, recurringPeriod, recurringLessThanMinimum, randomSampleFactor(Double), unsupportedDevice
+        case cannotGetConfiguration, enabled, exhausted, initialDelay, recurringPeriod, recurringLessThanMinimum, randomSampleFactor(Double), unsupportedDevice, recurringSurveyDisabled
     }
     
     let preSurveySession: PreSurveySession
@@ -124,9 +124,14 @@ internal extension ClientEligibility {
             
             // Skip checking if no created at or last surveyed
             if let lastSurveyed = self.lastSurveyedDate(defaults: defaults) {
-    
+                // Fail when a person has been surveyed but recurring surveys aren't enabled
+                if eligibilityConfiguration.recurringSurveyPeriod == nil {
+                    failure(.recurringSurveyDisabled)
+                    return
+                }
+
                 // Fail if less than recurring time
-                let recurring = TimeInterval(eligibilityConfiguration.recurringSurveyPeriod)
+                let recurring = TimeInterval(eligibilityConfiguration.recurringSurveyPeriod!)
                 if lastSurveyed.addingTimeInterval(recurring) >= Date() {
                     failure(.recurringPeriod)
                     return
@@ -134,15 +139,15 @@ internal extension ClientEligibility {
                 
                 // Fail if recurring period less than minimum survey interval
                 // Note: this will only ever fail if developer override caused this to happen
-                if eligibilityConfiguration.recurringSurveyPeriod < eligibilityConfiguration.minSurveyInterval {
+                if eligibilityConfiguration.recurringSurveyPeriod! < eligibilityConfiguration.minSurveyInterval {
                     failure(.recurringLessThanMinimum)
                     return
                 }
-            } else {
+            } else if let initialSurveyDelay = eligibilityConfiguration.initialSurveyDelay {
                 let createdAtOrLastSurveyedAt = overrides?.createdAt ?? firstSeenDate(defaults: defaults)
                 
-                // Fail if last surveyed is less than initial delay
-                let delay = TimeInterval(eligibilityConfiguration.initialSurveyDelay)
+                // Fail if last surveyed is less than initial delay.
+                let delay = TimeInterval(initialSurveyDelay)
                 if createdAtOrLastSurveyedAt.addingTimeInterval(delay) >= Date() {
                     failure(.initialDelay)
                     return
