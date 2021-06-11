@@ -21,29 +21,29 @@ class TintStateButton: UIButton {
                updateTint()
            }
        }
-    
+
     init() {
         super.init(frame: .zero)
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override var isSelected: Bool {
         willSet {
             super.isSelected = newValue
             updateTint()
         }
     }
-    
+
     override var isHighlighted: Bool {
         willSet {
             super.isHighlighted = newValue
             updateTint()
         }
     }
-    
+
     private func updateTint() {
         switch (isSelected, isHighlighted) {
         case (false, false):
@@ -59,37 +59,37 @@ class TintStateButton: UIButton {
 }
 
 class Button: UIButton {
-    
+
     let configuration: Configuration
     let mode: Mode
-    
+
     var theme: Theme {
         return configuration.theme
     }
-    
+
     enum Mode {
         case primary, secondary, scale, button
     }
-    
+
     init(configuration: Configuration, mode: Mode) {
         self.configuration = configuration
         self.mode = mode
         super.init(frame: .zero)
-        
+
         self.titleLabel?.numberOfLines = 0
         self.titleLabel?.textAlignment = .center
         self.contentEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
-        
+
         apply()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
-        
+
         switch theme.buttonShape {
         case .circle:
             layer.cornerRadius = bounds.height / 2.0
@@ -98,7 +98,7 @@ class Button: UIButton {
         case .square:
             layer.cornerRadius = 0
         }
-        
+
         switch mode {
         case .primary:
             ()
@@ -132,7 +132,7 @@ class Button: UIButton {
             }
         }
     }
-    
+
     // Listens for changes and adjusts the inset constraints
     override var contentEdgeInsets: UIEdgeInsets {
         get {
@@ -146,27 +146,27 @@ class Button: UIButton {
             super.contentEdgeInsets = newValue
         }
     }
-    
+
     private lazy var topInsetConstraint: NSLayoutConstraint? = {
         return titleLabel?.topAnchor.constraint(equalTo: topAnchor, constant: 0)
     }()
-    
+
     private lazy var bottomInsetConstraint: NSLayoutConstraint? = {
         return titleLabel?.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0)
     }()
-    
+
     private lazy var leftInsetConstraint: NSLayoutConstraint? = {
         return titleLabel?.leftAnchor.constraint(equalTo: leftAnchor, constant: 0)
     }()
-    
+
     private lazy var rightInsetConstraint: NSLayoutConstraint? = {
         return titleLabel?.rightAnchor.constraint(equalTo: rightAnchor, constant: 0)
     }()
-    
+
     @objc func onTouchUp(sender: Any?) {
         Haptic.medium.generate()
     }
-    
+
     private func apply() {
         // Sets inset constraints that allow the button to
         // grow with titel label size
@@ -174,10 +174,10 @@ class Button: UIButton {
         bottomInsetConstraint?.isActive = true
         leftInsetConstraint?.isActive = true
         rightInsetConstraint?.isActive = true
-        
+
         layer.masksToBounds = true
         titleLabel?.font = configuration.font(ofSize: 16)
-        
+
         let titleColorNormal: UIColor
         let titleColorHightlighted: UIColor?
         let titleColorSelected: UIColor?
@@ -188,8 +188,7 @@ class Button: UIButton {
         let backgroundImageSelectedHighlighted: UIImage?
         let borderWidth: CGFloat
         let borderColor: UIColor
-        
-        
+
         switch mode {
         case .primary:
             titleColorNormal = theme.primaryButton.textColor.color
@@ -200,7 +199,7 @@ class Button: UIButton {
             backgroundImageHighlighted = theme.primaryButton.backgroundColor.color.darker(by: 10)?.asImage
             backgroundImageSelected = nil
             backgroundImageSelectedHighlighted = nil
-            
+
             borderWidth = 1
             borderColor = theme.primaryButton.borderColor.color
         case .secondary:
@@ -212,7 +211,7 @@ class Button: UIButton {
             backgroundImageHighlighted = theme.secondaryButton.backgroundColor.color.darker(by: 10)?.asImage
             backgroundImageSelected = nil
             backgroundImageSelectedHighlighted = nil
-            
+
             borderWidth = 1
             borderColor = theme.secondaryButton.borderColor.color
         case .scale:
@@ -224,7 +223,7 @@ class Button: UIButton {
             backgroundImageHighlighted = theme.scale.activeBackgroundColor.color.asImage
             backgroundImageSelected = theme.scale.activeBackgroundColor.color.asImage
             backgroundImageSelectedHighlighted = theme.scale.activeBackgroundColor.color.darker(by: 5)?.asImage
-            
+
             borderWidth = 1
             borderColor = theme.scale.inactiveBorderColor.color
         case .button:
@@ -236,11 +235,11 @@ class Button: UIButton {
             backgroundImageHighlighted = theme.button.activeBackgroundColor.color.asImage
             backgroundImageSelected = theme.button.activeBackgroundColor.color.asImage
             backgroundImageSelectedHighlighted = theme.button.inactiveBackgroundColor.color.asImage
-            
+
             borderWidth = 1
             borderColor = theme.button.inactiveBorderColor.color
         }
-        
+
         setTitleColor(titleColorNormal, for: .normal)
         setTitleColor(titleColorHightlighted, for: [.normal, .highlighted])
         setTitleColor(titleColorSelected, for: .selected)
@@ -249,7 +248,7 @@ class Button: UIButton {
         setBackgroundImage(backgroundImageHighlighted, for: [.normal, .highlighted])
         setBackgroundImage(backgroundImageSelected, for: .selected)
         setBackgroundImage(backgroundImageSelectedHighlighted, for: [.selected, .highlighted])
-        
+
         layer.borderWidth = borderWidth
         layer.borderColor = borderColor.cgColor
     }

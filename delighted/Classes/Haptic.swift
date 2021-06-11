@@ -17,7 +17,7 @@ extension Haptic {
                     return .heavy
                 }
             }
-            
+
             let generator = UIImpactFeedbackGenerator(style: style)
             generator.impactOccurred()
         }

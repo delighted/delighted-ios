@@ -2,40 +2,40 @@ import UIKit
 
 class StarsComponent: UIView, Component {
     let theme: Theme
-    
-    typealias OnSelection = (Int) -> ()
+
+    typealias OnSelection = (Int) -> Void
     let onSelection: OnSelection
-    
+
     init(theme: Theme, onSelection: @escaping OnSelection) {
         self.theme = theme
         self.onSelection = onSelection
         super.init(frame: CGRect.zero)
         setupView()
     }
-    
+
     override init(frame: CGRect) {
         fatalError()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError()
     }
-    
+
     private lazy var buttons: [UIButton] = {
         return [
             makeButton(),
             makeButton(),
             makeButton(),
             makeButton(),
-            makeButton(),
+            makeButton()
         ]
     }()
-    
+
     private func setupView() {
         let component = ViewLayout.createCenterHorizontalStackView(subviews: buttons)
         component.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(component)
-        
+
         NSLayoutConstraint.activate([
             component.topAnchor.constraint(equalTo: self.topAnchor),
             component.leadingAnchor.constraint(greaterThanOrEqualTo: self.leadingAnchor),
@@ -44,15 +44,15 @@ class StarsComponent: UIView, Component {
             component.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
     }
-    
+
     private func makeButton() -> UIButton {
         let inactiveColor = theme.stars.inactiveBackgroundColor.color
         let activeColor = theme.stars.activeBackgroundColor.color
         let darkerActiveColor = theme.stars.activeBackgroundColor.color.darker(by: 5) ?? activeColor
-        
+
         let button = TintStateButton()
         let selectedImage = Images.star.image
-        
+
         switch theme.buttonStyle {
         case .solid:
             let image = Images.star.image
@@ -60,7 +60,7 @@ class StarsComponent: UIView, Component {
             button.setImage(selectedImage, for: .highlighted)
             button.setImage(selectedImage, for: .selected)
             button.setImage(selectedImage, for: [.selected, .highlighted])
-            
+
             button.normalTintColor = inactiveColor
             button.highlightedTintColor = activeColor
             button.selectedTintColor = activeColor
@@ -71,13 +71,13 @@ class StarsComponent: UIView, Component {
             button.setImage(selectedImage, for: .highlighted)
             button.setImage(selectedImage, for: .selected)
             button.setImage(selectedImage, for: [.selected, .highlighted])
-            
+
             button.normalTintColor = inactiveColor
             button.highlightedTintColor = activeColor
             button.selectedTintColor = activeColor
             button.selectedHighlightedTintColor = darkerActiveColor
         }
-        
+
         button.addTarget(self, action: #selector(onSelection(sender:)), for: .touchUpInside)
         button.addTarget(self, action: #selector(highlightStars(sender:)), for: .touchDown)
         button.addTarget(self, action: #selector(unHighlightAll(sender:)), for: .touchUpOutside)
@@ -87,10 +87,10 @@ class StarsComponent: UIView, Component {
 
         button.width(constant: 55)
         button.height(constant: 55)
-        
+
         return button
     }
-    
+
     @objc func highlightStars(sender: Any?) {
         guard let buttonSelected = sender as? UIButton else {
             Logger.log(.fatal, "Could not cast selected object as a button")
@@ -105,30 +105,30 @@ class StarsComponent: UIView, Component {
             }
         }
     }
-    
+
     @objc func unHighlightAll(sender: Any?) {
         for button in buttons {
             button.isHighlighted = false
         }
     }
-    
+
     @objc func onSelection(sender: Any?) {
         Haptic.medium.generate()
-        
+
         guard let buttonSelected = sender as? UIButton else {
             Logger.log(.fatal, "Could not cast selected object as a button")
             return
         }
-        
+
         var selected = true
         for button in buttons {
             button.isSelected = selected
-            
+
             if button == buttonSelected {
                 selected = false
             }
         }
-        
+
         if let index = buttons.firstIndex(of: buttonSelected) {
             // Adding 1 because stars will always be value of 1 to 5
             let value = index + 1

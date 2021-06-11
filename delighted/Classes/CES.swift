@@ -1,21 +1,21 @@
 import UIKit
 
 class CESComponent: UIView, Component {
-    
+
     let configuration: Configuration
     let minLabel: String
     let maxLabel: String
-    
+
     let minNumber: Int
     let maxNumber: Int
-    
+
     var theme: Theme {
         return configuration.theme
     }
-    
-    typealias OnSelection = (Int) -> ()
+
+    typealias OnSelection = (Int) -> Void
     let onSelection: OnSelection
-    
+
     init(configuration: Configuration, minLabel: String, maxLabel: String, minNumber: Int, maxNumber: Int, onSelection: @escaping OnSelection) {
         self.configuration = configuration
         self.minLabel = minLabel
@@ -26,34 +26,34 @@ class CESComponent: UIView, Component {
         super.init(frame: CGRect.zero)
         setupView()
     }
-    
+
     override init(frame: CGRect) {
         fatalError()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError()
     }
-    
+
     private lazy var buttons: [Button] = {
         var buttons = [Button]()
-        
+
         for i in minNumber...maxNumber {
             let button = Button(configuration: configuration, mode: .scale)
             button.setTitle("\(i)", for: .normal)
             button.titleLabel?.font = configuration.font(ofSize: 16)
             button.isSelected = true
-            
+
             button.addTarget(self, action: #selector(onSelection(sender:)), for: .touchUpInside)
             button.width(constant: 50)
             button.heightEqualWidth()
-            
+
             buttons.append(button)
         }
-        
+
         return buttons
     }()
-    
+
     private lazy var lowerLabel: UILabel = {
         let label = UILabel()
         label.text = minLabel
@@ -63,7 +63,7 @@ class CESComponent: UIView, Component {
         label.textAlignment = .left
         return label
     }()
-    
+
     private lazy var higherLabel: UILabel = {
         let label = UILabel()
         label.text = maxLabel
@@ -73,7 +73,7 @@ class CESComponent: UIView, Component {
         label.textAlignment = .right
         return label
     }()
-    
+
     private func setupView() {
         let component = ViewLayout.createCenterHorizontalStackView(
             subviews: buttons,
@@ -81,14 +81,14 @@ class CESComponent: UIView, Component {
             distribution: maxNumber >= 5 ? .fillEqually : .equalSpacing,
             spacing: 8
         )
-        
+
         let labels = ViewLayout.createCenterHorizontalStackView(subviews: [lowerLabel, higherLabel], alignment: .top, distribution: .equalSpacing, spacing: 12)
-        
+
         let container = ViewLayout.createCenterVerticalStackView(subviews: [component, labels], spacing: 18)
         container.translatesAutoresizingMaskIntoConstraints = false
-        
+
         self.addSubview(container)
-        
+
         // Component should scale full width if there are 5 or more
         // Otherwise component should be tight to the center
         if maxNumber >= 5 {
@@ -109,23 +109,23 @@ class CESComponent: UIView, Component {
             ])
         }
     }
-    
+
     func adjustForFullScreen() {
         lowerLabel.isHidden = true
         higherLabel.isHidden = true
     }
-    
+
     @objc func onSelection(sender: Any?) {
         guard let buttonSelected = sender as? Button else {
             Logger.log(.fatal, "Could not cast selected object as a button")
             return
         }
-        
+
         for button in buttons {
             button.isSelected = false
         }
         buttonSelected.isSelected = true
-        
+
         if let index = buttons.firstIndex(of: buttonSelected) {
             let value = index + minNumber
             onSelection(value)

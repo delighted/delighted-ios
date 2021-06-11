@@ -4,17 +4,17 @@ class Scale: UIView {
     let configuration: Configuration
     let minLabel: String
     let maxLabel: String
-    
+
     let minNumber: Int
     let maxNumber: Int
-    
+
     var theme: Theme {
         return configuration.theme
     }
-    
-    typealias OnSelection = (Int) -> ()
+
+    typealias OnSelection = (Int) -> Void
     let onSelection: OnSelection
-    
+
     init(configuration: Configuration, minLabel: String, maxLabel: String, minNumber: Int, maxNumber: Int, onSelection: @escaping OnSelection) {
         self.configuration = configuration
         self.minLabel = minLabel
@@ -25,15 +25,15 @@ class Scale: UIView {
         super.init(frame: CGRect.zero)
         setupView()
     }
-    
+
     override init(frame: CGRect) {
         fatalError()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError()
     }
-    
+
     private lazy var ces: CESComponent = {
         let view = CESComponent(
             configuration: configuration,
@@ -45,7 +45,7 @@ class Scale: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    
+
     private lazy var nps: NPSComponent = {
         let view = NPSComponent(
             configuration: configuration,
@@ -57,23 +57,23 @@ class Scale: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    
+
     private lazy var showNPS = {
         return maxNumber - minNumber > 5
     }()
-    
+
     func adjustForInitialDisplay() {
         if showNPS {
             nps.adjustForInitialDisplay()
         }
     }
-    
+
     private func setupView() {
         clipsToBounds = false
-        
+
         let view: UIView = showNPS ? nps : ces
         self.addSubview(view)
-        
+
         NSLayoutConstraint.activate([
             view.topAnchor.constraint(equalTo: self.topAnchor),
             view.bottomAnchor.constraint(equalTo: self.bottomAnchor),

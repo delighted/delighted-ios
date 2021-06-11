@@ -19,7 +19,7 @@ public struct Theme: Decodable {
     let slider: Slider
     let closeButton: CloseButton
     let ios: IOS
-    
+
     public init(display: Display, containerCornerRadius: CGFloat, primaryColor: UIColor, buttonStyle: ThemeStyle,
                 buttonShape: ThemeShape, backgroundColor: UIColor, primaryTextColor: UIColor,
                 secondaryTextColor: UIColor, textarea: TextArea, primaryButton: PrimaryButton,
@@ -44,43 +44,43 @@ public struct Theme: Decodable {
         self.closeButton = closeButton
         self.ios = ios
     }
-    
+
     public struct TextArea: Decodable {
         let backgroundColor: Color
         let textColor: Color
         let borderColor: Color
-        
+
         public init(backgroundColor: UIColor, textColor: UIColor, borderColor: UIColor) {
             self.backgroundColor = Color(color: backgroundColor)
             self.textColor = Color(color: textColor)
             self.borderColor = Color(color: borderColor)
         }
     }
-    
+
     public struct PrimaryButton: Decodable {
         let backgroundColor: Color
         let textColor: Color
         let borderColor: Color
-        
+
         public init(backgroundColor: UIColor, textColor: UIColor, borderColor: UIColor) {
             self.backgroundColor = Color(color: backgroundColor)
             self.textColor = Color(color: textColor)
             self.borderColor = Color(color: borderColor)
         }
     }
-    
+
     public struct SecondaryButton: Decodable {
         let backgroundColor: Color
         let textColor: Color
         let borderColor: Color
-        
+
         public init(backgroundColor: UIColor, textColor: UIColor, borderColor: UIColor) {
             self.backgroundColor = Color(color: backgroundColor)
             self.textColor = Color(color: textColor)
             self.borderColor = Color(color: borderColor)
         }
     }
-    
+
     public struct Button: Decodable {
         let activeBackgroundColor: Color
         let activeTextColor: Color
@@ -88,7 +88,7 @@ public struct Theme: Decodable {
         let inactiveBackgroundColor: Color
         let inactiveTextColor: Color
         let inactiveBorderColor: Color
-        
+
         public init(activeBackgroundColor: UIColor, activeTextColor: UIColor, activeBorderColor: UIColor,
                     inactiveBackgroundColor: UIColor, inactiveTextColor: UIColor, inactiveBorderColor: UIColor) {
             self.activeBackgroundColor = Color(color: activeBackgroundColor)
@@ -99,27 +99,27 @@ public struct Theme: Decodable {
             self.inactiveBorderColor = Color(color: inactiveBorderColor)
         }
     }
-    
+
     public struct Stars: Decodable {
         let activeBackgroundColor: Color
         let inactiveBackgroundColor: Color
-        
+
         public init(activeBackgroundColor: UIColor, inactiveBackgroundColor: UIColor) {
             self.activeBackgroundColor = Color(color: activeBackgroundColor)
             self.inactiveBackgroundColor = Color(color: inactiveBackgroundColor)
         }
     }
-    
+
     public struct Icon: Decodable {
         let activeBackgroundColor: Color
         let inactiveBackgroundColor: Color
-        
+
         public init(activeBackgroundColor: UIColor, inactiveBackgroundColor: UIColor) {
             self.activeBackgroundColor = Color(color: activeBackgroundColor)
             self.inactiveBackgroundColor = Color(color: inactiveBackgroundColor)
         }
     }
-    
+
     public struct Scale: Decodable {
         let activeBackgroundColor: Color
         let activeTextColor: Color
@@ -127,7 +127,7 @@ public struct Theme: Decodable {
         let inactiveBackgroundColor: Color
         let inactiveTextColor: Color
         let inactiveBorderColor: Color
-        
+
         public init(activeBackgroundColor: UIColor, activeTextColor: UIColor, activeBorderColor: UIColor,
                     inactiveBackgroundColor: UIColor, inactiveTextColor: UIColor, inactiveBorderColor: UIColor) {
             self.activeBackgroundColor = Color(color: activeBackgroundColor)
@@ -138,7 +138,7 @@ public struct Theme: Decodable {
             self.inactiveBorderColor = Color(color: inactiveBorderColor)
         }
     }
-    
+
     public struct Slider: Decodable {
         let knobBackgroundColor: Color
         let knobTextColor: Color
@@ -148,7 +148,7 @@ public struct Theme: Decodable {
         let hoverBackgroundColor: Color
         let hoverTextColor: Color
         let hoverBorderColor: Color
-        
+
         public init(knobBackgroundColor: UIColor, knobTextColor: UIColor, knobBorderColor: UIColor,
                     trackActiveColor: UIColor, trackInactiveColor: UIColor, hoverBackgroundColor: UIColor, hoverTextColor: UIColor, hoverBorderColor: UIColor) {
             self.knobBackgroundColor = Color(color: knobBackgroundColor)
@@ -161,7 +161,7 @@ public struct Theme: Decodable {
             self.hoverBorderColor = Color(color: hoverBorderColor)
         }
     }
-    
+
     public struct CloseButton: Decodable {
         let normalBackgroundColor: Color
         let normalTextColor: Color
@@ -169,7 +169,7 @@ public struct Theme: Decodable {
         let highlightedBackgroundColor: Color
         let highlightedTextColor: Color
         let highlightedBorderColor: Color
-        
+
         public init(normalBackgroundColor: UIColor, normalTextColor: UIColor, normalBorderColor: UIColor,
                     highlightedBackgroundColor: UIColor, highlightedTextColor: UIColor, highlightedBorderColor: UIColor) {
             self.normalBackgroundColor = Color(color: normalBackgroundColor)
@@ -180,7 +180,7 @@ public struct Theme: Decodable {
             self.highlightedBorderColor = Color(color: highlightedBorderColor)
         }
     }
-    
+
     public struct IOS: Decodable {
         public enum KeyboardAppearance: String, Decodable {
             case light, dark
@@ -188,25 +188,25 @@ public struct Theme: Decodable {
         public enum StatusBarMode: String, Decodable {
             case lightContent = "light_content", darkContent = "dark_content"
         }
-        
+
         let keyboardAppearance: KeyboardAppearance?
         let statusBarMode: StatusBarMode?
         let statusBarHidden: Bool?
-        
+
         public init(keyboardAppearance: KeyboardAppearance? = nil, statusBarMode: StatusBarMode?, statusBarHidden: Bool?) {
             self.keyboardAppearance = keyboardAppearance
             self.statusBarMode = statusBarMode
             self.statusBarHidden = statusBarHidden
         }
-        
+
         enum CodingKeys: CodingKey {
             case keyboardAppearance, statusBarMode, statusBarHidden
         }
     }
-    
+
     public struct Color {
         let color: UIColor
-        
+
         init(color: UIColor) {
             self.color = color
         }
@@ -217,7 +217,7 @@ extension Theme.Color: Decodable {
     enum CodingKeys: CodingKey {
         case color
     }
-    
+
     public init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         let hexString = try container.decode(String.self)

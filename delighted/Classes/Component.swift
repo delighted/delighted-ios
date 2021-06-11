@@ -7,10 +7,10 @@ protocol Component where Self: UIView {
 
 extension Component {
     func adjustForInitialDisplay() {
-        
+
     }
-    
+
     func adjustForFullScreen() {
-        
+
     }
 }

@@ -17,12 +17,12 @@ extension Session {
     var requestBaseURL: URL {
         return (baseURL ?? productionBaseURL).appendingPathComponent(delightedID)
     }
-    
+
     var requestCDNURL: URL {
         return (cdnURL ?? productionCDNURL).appendingPathComponent(delightedID)
     }
-    
-    func sendRequest(route: Route, completion: @escaping (Data?, HTTPURLResponse?) -> (), failure: @escaping (Error) -> ()) {
+
+    func sendRequest(route: Route, completion: @escaping (Data?, HTTPURLResponse?) -> Void, failure: @escaping (Error) -> Void) {
         do {
             let request = try Request(baseURL: (route.useCDN ? requestCDNURL : requestBaseURL), route: route)
             request.send(completion: completion, failure: failure)
@@ -40,7 +40,7 @@ class PreSurveySession: Session {
     let baseURL: URL?
     let cdnURL: URL?
     let callback: Delighted.SurveyCallback?
-    
+
     init(delightedID: String, baseURL: URL?, cdnURL: URL?, callback: Delighted.SurveyCallback?) {
         self.delightedID = delightedID
         self.baseURL = baseURL
@@ -57,14 +57,14 @@ class SurveySession: Session {
     let baseURL: URL?
     let cdnURL: URL?
     let callback: Delighted.SurveyCallback?
-    
+
     let surveyRequest: SurveyRequest
     var surveyResponse: SurveyResponse
     let configuration: Configuration
     var status = DelightedSurveyResponseStatus.unanswered
 
     var pusher: Pusher?
-    
+
     init(preSurveySession: PreSurveySession, surveyRequest: SurveyRequest, surveyResponse: SurveyResponse, configuration: Configuration) {
         self.delightedID = preSurveySession.delightedID
         self.baseURL = preSurveySession.baseURL
@@ -74,18 +74,18 @@ class SurveySession: Session {
         self.surveyResponse = surveyResponse
         self.configuration = configuration
     }
-    
+
     func connectPusher() {
         guard surveyRequest.survey.configuration.pusher.enabled else {
             Logger.log(.info, "Pusher is disabled")
             return
         }
-        
+
         guard let url = URL(string: surveyRequest.survey.configuration.pusher.webSocketUrl!) else {
             Logger.log(.error, "Pusher websocket url is invalid")
             return
         }
-        
+
         pusher = Pusher(
             websocketURL: url,
             baseAPIURL: requestBaseURL,
@@ -94,11 +94,11 @@ class SurveySession: Session {
         )
         pusher?.connect()
     }
-    
+
     func disconnectPusher() {
         pusher?.disconnect()
     }
-    
+
     func sendClientTyping() {
         pusher?.sendClientTyping()
     }
