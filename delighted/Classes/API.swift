@@ -160,9 +160,7 @@ extension Request {
             }
 
             // make the request
-            let task = Request.session.dataTask(with: urlRequest) {
-                (data, response, _) in
-
+            let task = Request.session.dataTask(with: urlRequest) { (data, response, _) in
                 // Verify a data and a response
                 guard let data = data, let response = response as? HTTPURLResponse else {
                     RequestCache.store(request: self)
@@ -287,7 +285,7 @@ extension RequestCache {
             request.send(completion: { (_, _) in
                 // Remove file if sent successfully
                 RequestCache.remove(request: request)
-            }) { (_) in
+            }, failure: { (_) in
                 // Decrement count and remove if down to 0
                 var failedAgainRequest = request
                 failedAgainRequest.retryCount -= 1
@@ -297,7 +295,7 @@ extension RequestCache {
                 } else {
                     RequestCache.store(request: failedAgainRequest)
                 }
-            }
+            })
         }
     }
 }

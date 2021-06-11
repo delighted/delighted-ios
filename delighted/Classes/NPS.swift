@@ -205,9 +205,9 @@ class NPSComponent: UIView, Component {
             self.setThumbConstant(self.trackView.frame.width * percent)
             self.setNeedsLayout()
             self.layoutIfNeeded()
-        }) { (_) in
+        }, completion: { (_) in
             finished?()
-        }
+        })
 
         // Determine if  stepping up or down in the stride
         let isSteppingUp = startingWholeNumber < Int(self.lastWholeNumber)
@@ -421,12 +421,12 @@ extension NPSComponent {
 
             self.setNeedsLayout()
             self.layoutIfNeeded()
-        }) { [unowned self] finished in
+        }, completion: { [unowned self] finished in
             self.thumbViewLabel.isHidden = hideLabel
             if finished {
                 completion?()
             }
-        }
+        })
     }
 
     func handleTouchBegin() {

@@ -107,11 +107,11 @@ import UIKit
                 testMode: eligibilityOverrides?.testMode,
                 inViewController: userViewController
             )
-        }) { (failedReason) in
+        }, whenIneligible: { (failedReason) in
             Logger.log(.debug, "Failed client side eligibility at step \(failedReason)")
             Delighted.surveying = false
             callback?(.failedClientEligibility(failedReason))
-        }
+        })
     }
 
     public static func hide(completion: (() -> Void)? = nil) {
@@ -165,12 +165,12 @@ import UIKit
                     Logger.log(.error, "Could not decode survey request \(error)")
                 }
             }
-        }) { (error) in
+        }, failure: { (error) in
             DispatchQueue.main.async {
                 Delighted.surveying = false
                 preSurveySession.callback?(.error(error))
             }
-        }
+        })
     }
 
     private static func showSurvey(
@@ -182,7 +182,7 @@ import UIKit
 
         // Finds window and root view controller for presenting
         // TOOD: look into iOS 13 weirdness
-        guard let _ = userViewController ?? UIApplication.shared.keyWindow?.rootViewController else {
+        guard (userViewController ?? UIApplication.shared.keyWindow?.rootViewController) != nil else {
             Logger.log(.fatal, "No window or root view controller to present on")
             return
         }

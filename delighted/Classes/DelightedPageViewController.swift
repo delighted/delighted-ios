@@ -142,12 +142,12 @@ class DelightedPageViewController: UIPageViewController {
 
             UIView.animate(withDuration: 0.35, animations: {
                 window.frame = newFrame
-            }) { (_) in
+            }, completion: { (_) in
                 // Releases the window
                 Delighted.window = nil
                 Delighted.surveying = false
                 completion?()
-            }
+            })
         } else {
             // Releases the window
             Delighted.window = nil

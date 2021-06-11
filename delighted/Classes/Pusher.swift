@@ -78,7 +78,7 @@ extension Pusher {
         // Increments number of events sent
         // Encoding event to write to socket
         self.clientTypingLastSent = Date()
-        self.numberOfClientTypingsSent = self.numberOfClientTypingsSent + 1
+        self.numberOfClientTypingsSent += 1
 
         let event = Event(event: .clientTyping, channel: self.channelName, data: [
             "survey_request_token": self.surveyRequestToken
@@ -134,9 +134,9 @@ private extension Pusher {
             } catch {
                 Logger.log(.error, "Could not decode push auth response \(error.localizedDescription)")
             }
-        }) { (error) in
+        }, failure: { (error) in
             Logger.log(.error, "Error sending push auth request \(error.localizedDescription)")
-        }
+        })
     }
 
     func subscribe(pusherAuthResponse: PusherAuthResponse) {

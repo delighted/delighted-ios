@@ -86,12 +86,12 @@ extension ClientEligibility {
                     Logger.log(.error, "Could not decode eligibility configuration request")
                 }
             }
-        }) { (error) in
+        }, failure: { (error) in
             DispatchQueue.main.async {
                 Logger.log(.error, "Could not complete eligibility configuration request \(error.localizedDescription)")
                 failure(.cannotGetConfiguration)
             }
-        }
+        })
     }
 }
 

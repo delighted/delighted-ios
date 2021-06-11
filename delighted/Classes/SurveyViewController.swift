@@ -608,7 +608,7 @@ private extension SurveyViewController {
             self?.commentTextView.alpha = 1
             self?.submitButton.alpha = 1
             self?.poweredByLabel.alpha = 1
-        }) { [weak self] (_: Bool) in
+        }, completion: { [weak self] (_: Bool) in
             self?.isFullScreen = true
             self?.commentTextView.becomeFirstResponder()
 
@@ -620,6 +620,6 @@ private extension SurveyViewController {
             // showing which may be from some animation issues
             self?.commentTextView.text = "\n"
             self?.commentTextView.text = ""
-        }
+        })
     }
 }

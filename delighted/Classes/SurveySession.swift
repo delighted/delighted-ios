@@ -110,9 +110,9 @@ extension SurveySession {
         sendRequest(route: route, completion: { [unowned self] (_, _) in
             self.status = .saveSuccessful
             Logger.log(.debug, "Survey response saved for Survey Request Token: \(self.surveyResponse.surveyRequestToken)")
-        }) { [unowned self] (error) in
+        }, failure: { [unowned self] (error) in
             self.status = .saveFailed
             Logger.log(.debug, "Survey response failed Survey Request Token: \(self.surveyResponse.surveyRequestToken) with \(error.localizedDescription)")
-        }
+        })
     }
 }
