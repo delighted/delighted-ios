@@ -40,7 +40,7 @@ class Pusher {
         self.baseAPIURL = baseAPIURL
         self.channelName = channelName
         self.surveyRequestToken = surveyRequestToken
-        socket = WebSocket(url: websocketURL)
+        socket = WebSocket(request: URLRequest(url: websocketURL))
         socket.delegate = self
     }
 }
@@ -152,29 +152,22 @@ private extension Pusher {
 }
 
 extension Pusher: WebSocketDelegate {
-    public func websocketDidConnect(socket: WebSocketClient) {
-        
-    }
-    
-    public func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
-        
-    }
-    
-    public func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
-        
-    }
-    
-    public func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
-        guard let data = text.data(using: .utf8) else {
-            Logger.log(.error, "Invalid data from pusher")
-            return
-        }
-        
-        do {
-            let event = try decoder.decode(Event.self, from: data)
-            handleEvent(event: event)
-        } catch {
-            Logger.log(.error, "Error decoding pusher message: \(error.localizedDescription)")
+    func didReceive(event: WebSocketEvent, client: WebSocket) {
+        switch event {
+        case .text(let text):
+            guard let data = text.data(using: .utf8) else {
+                Logger.log(.error, "Invalid data from pusher")
+                return
+            }
+
+            do {
+                let event = try decoder.decode(Event.self, from: data)
+                handleEvent(event: event)
+            } catch {
+                Logger.log(.error, "Error decoding pusher message: \(error.localizedDescription)")
+            }
+        default:
+            break
         }
     }
 }

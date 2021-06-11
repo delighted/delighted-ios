@@ -17,5 +17,5 @@ Pod::Spec.new do |spec|
   spec.ios.source_files      = "delighted/Classes/*.swift"
   spec.resources             = "delighted/Assets/*.xcassets"
 
-  spec.dependency "Starscream", "~> 3.1.1" # Support for Swift 5
+  spec.dependency "Starscream", "~> 4.0.4" # Support for Swift 5
 end

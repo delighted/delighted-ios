@@ -122,7 +122,7 @@ public class ThankYouViewController: UIViewController, DelightedPageViewControll
     
     @objc func onLinkClick(sender: Any?) {
         if let thankYouGroup = thankYouGroup, let url = URL(string: thankYouGroup.linkURL!), UIApplication.shared.canOpenURL(url)  {
-            UIApplication.shared.openURL(url)
+            UIApplication.shared.open(url, options: [:])
         }
     }
 }

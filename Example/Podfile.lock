@@ -1,7 +1,7 @@
 PODS:
-  - Delighted (1.0.2):
-    - Starscream (~> 3.1.1)
-  - Starscream (3.1.1)
+  - Delighted (1.0.3):
+    - Starscream (~> 4.0.4)
+  - Starscream (4.0.4)
 
 DEPENDENCIES:
   - Delighted (from `../`)
@@ -15,9 +15,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Delighted: 18175b766c2e029d8d42ad2de4fb36a6cdadf5c7
-  Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
+  Delighted: d837987f121f0fa15eaba864bf9136a6994814c8
+  Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
 
 PODFILE CHECKSUM: 0f230a2ccba2267820517754de572226c7d8e5cf
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.10.1
