@@ -1,7 +1,7 @@
 import UIKit
 
 class OptionSelect: UIView {
-    let configuration: Configuration
+    let configuration: ButtonConfiguration
     let question: Survey.Template.AdditionalQuestion
     let mode: Mode
     
@@ -18,7 +18,7 @@ class OptionSelect: UIView {
         case single, multi
     }
     
-    init(configuration: Configuration, question: Survey.Template.AdditionalQuestion, mode: Mode, onSelection: @escaping OnSelection) {
+    init(configuration: ButtonConfiguration, question: Survey.Template.AdditionalQuestion, mode: Mode, onSelection: @escaping OnSelection) {
         self.configuration = configuration
         self.question = question
         self.mode = mode

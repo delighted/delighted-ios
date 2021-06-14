@@ -2,10 +2,10 @@ import UIKit
 
 class PoweredBy: UIButton {
     
-    let configuration: Configuration
+    let buttonConfiguration: ButtonConfiguration
     
-    init(configuration: Configuration) {
-        self.configuration = configuration
+    init(configuration: ButtonConfiguration) {
+        self.buttonConfiguration = configuration
         super.init(frame: CGRect.zero)
         setupView()
     }
@@ -20,8 +20,8 @@ class PoweredBy: UIButton {
     
     private func setupView() {
         translatesAutoresizingMaskIntoConstraints = false
-        setTitle(configuration.poweredByLinkText, for: .normal)
-        setTitleColor(configuration.theme.secondaryTextColor.color, for: .normal)
+        setTitle(buttonConfiguration.poweredByLinkText, for: .normal)
+        setTitleColor(buttonConfiguration.theme.secondaryTextColor.color, for: .normal)
         titleLabel?.numberOfLines = 1
         titleLabel?.textAlignment = .center
         titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .light)
@@ -30,7 +30,7 @@ class PoweredBy: UIButton {
     }
     
     @objc func onTap() {
-        if let url = URL(string: configuration.poweredByLinkURL), UIApplication.shared.canOpenURL(url) {
+        if let url = URL(string: buttonConfiguration.poweredByLinkURL), UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.openURL(url)
         }
     }

@@ -176,7 +176,7 @@ import UIKit
     private static func showSurvey(
         preSurveySession: PreSurveySession,
         surveyRequest: SurveyRequest,
-        configuration: Configuration,
+        configuration: ButtonConfiguration,
         inViewController userViewController: UIViewController? = nil
         ) {
         

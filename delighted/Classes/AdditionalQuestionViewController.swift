@@ -12,7 +12,7 @@ public class AdditionalQuestionViewController: UIViewController, DelightedPageVi
         return session.surveyRequest.survey
     }
     
-    var configuration: Configuration {
+    var configuration: ButtonConfiguration {
         return session.configuration
     }
     
@@ -159,7 +159,7 @@ public class AdditionalQuestionViewController: UIViewController, DelightedPageVi
         button.contentEdgeInsets = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
         
         button.layer.masksToBounds = true
-        button.layer.cornerRadius = Configuration.cornerRadius
+        button.layer.cornerRadius = ButtonConfiguration.cornerRadius
         button.addTarget(self, action: #selector(onNext(sender:)), for: .touchUpInside)
         
         button.titleLabel?.numberOfLines = 0
@@ -176,7 +176,7 @@ public class AdditionalQuestionViewController: UIViewController, DelightedPageVi
         button.contentEdgeInsets = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
         
         button.layer.masksToBounds = true
-        button.layer.cornerRadius = Configuration.cornerRadius
+        button.layer.cornerRadius = ButtonConfiguration.cornerRadius
         button.addTarget(self, action: #selector(onPrevious(sender:)), for: .touchUpInside)
         
         button.titleLabel?.numberOfLines = 0
