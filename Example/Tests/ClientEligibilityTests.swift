@@ -2,9 +2,9 @@ import XCTest
 @testable import Delighted
 
 class ClientEligibilityTests: XCTestCase {
-    
+
     var preSurveySession = PreSurveySession(delightedID: "", baseURL: nil, cdnURL: nil, callback: nil)
-    
+
     var configuration = EligibilityConfiguration(
         surveyContextId: "",
         enabled: false,
@@ -15,7 +15,7 @@ class ClientEligibilityTests: XCTestCase {
         forceDisplay: false,
         planLimitExhausted: false
     )
-    
+
     func testOverrides() {
         XCTAssertEqual(configuration.enabled, false)
         XCTAssertEqual(configuration.minSurveyInterval, 0)
@@ -24,7 +24,7 @@ class ClientEligibilityTests: XCTestCase {
         XCTAssertEqual(configuration.initialSurveyDelay, 1)
         XCTAssertEqual(configuration.forceDisplay, false)
         XCTAssertEqual(configuration.planLimitExhausted, false)
-        
+
         let overrides = EligibilityOverrides(
             testMode: false,
             createdAt: nil,
@@ -32,7 +32,7 @@ class ClientEligibilityTests: XCTestCase {
             recurringPeriod: 200
         )
         configuration.apply(overrides: overrides)
-        
+
         XCTAssertEqual(configuration.enabled, false)
         XCTAssertEqual(configuration.minSurveyInterval, 0)
         XCTAssertEqual(configuration.sampleFactor, 1)
@@ -41,26 +41,26 @@ class ClientEligibilityTests: XCTestCase {
         XCTAssertEqual(configuration.forceDisplay, false)
         XCTAssertEqual(configuration.planLimitExhausted, false)
     }
-    
+
     func testPassOnTest() {
         let passExpectation = expectation(description: "Pass")
-        
+
         let overrides = EligibilityOverrides(testMode: true)
         let eligibility = ClientEligibility(preSurveySession: preSurveySession)
-        
+
         let defaults = eligibility.getDefaults(with: configuration)
         eligibility.setFirstSeenDate(defaults: defaults, date: nil)
-        
+
         eligibility.check(with: overrides, whenEligible: {
 
             passExpectation.fulfill()
-        }) { (failedStep) in
+        }) { (_) in
             XCTFail("Check should have passed right away")
         }
-        
+
         waitForExpectations(timeout: 0.3, handler: nil)
     }
-    
+
     func testFailOnEnabledFalse() {
         let eligibility = ClientEligibility(preSurveySession: preSurveySession)
         let defaults = eligibility.getDefaults(with: configuration)
@@ -76,10 +76,10 @@ class ClientEligibilityTests: XCTestCase {
             forceDisplay: false,
             planLimitExhausted: false
         )
-        
+
         let failExpectation = expectation(description: "Fail")
         eligibility.doClientSideCheck(eligibilityConfiguration: configuration, passed: {
-            
+
         }) { (failedReason) in
             if case ClientEligibility.FailedReason.enabled = failedReason {
                 // Success
@@ -88,15 +88,15 @@ class ClientEligibilityTests: XCTestCase {
             }
             failExpectation.fulfill()
         }
-        
+
         waitForExpectations(timeout: 0.3, handler: nil)
     }
-    
+
     func testFailOnPlanExhaustedTrue() {
         let eligibility = ClientEligibility(preSurveySession: preSurveySession)
         let defaults = eligibility.getDefaults(with: configuration)
         eligibility.setFirstSeenDate(defaults: defaults, date: nil)
-        
+
         let configuration = EligibilityConfiguration(
             surveyContextId: "",
             enabled: true,
@@ -107,10 +107,10 @@ class ClientEligibilityTests: XCTestCase {
             forceDisplay: false,
             planLimitExhausted: true
         )
-        
+
         let failExpectation = expectation(description: "Fail")
         eligibility.doClientSideCheck(eligibilityConfiguration: configuration, passed: {
-            
+
         }) { (failedReason) in
             if case ClientEligibility.FailedReason.exhausted = failedReason {
                 // Success
@@ -119,15 +119,15 @@ class ClientEligibilityTests: XCTestCase {
             }
             failExpectation.fulfill()
         }
-        
+
         waitForExpectations(timeout: 0.3, handler: nil)
     }
-    
+
     func testPassOnForceDisplayTrue() {
         let eligibility = ClientEligibility(preSurveySession: preSurveySession)
         let defaults = eligibility.getDefaults(with: configuration)
         eligibility.setFirstSeenDate(defaults: defaults, date: nil)
-        
+
         let configuration = EligibilityConfiguration(
             surveyContextId: "",
             enabled: true,
@@ -138,23 +138,23 @@ class ClientEligibilityTests: XCTestCase {
             forceDisplay: true,
             planLimitExhausted: false
         )
-        
+
         let passExpectation = expectation(description: "Pass")
         eligibility.doClientSideCheck(eligibilityConfiguration: configuration, passed: {
             passExpectation.fulfill()
-        }) { (failedStep) in
-            
+        }) { (_) in
+
         }
-        
+
         waitForExpectations(timeout: 0.3, handler: nil)
     }
-    
+
     func testPassOnNotPreviousSurveyedWithNoInitialDelay() {
         let eligibility = ClientEligibility(preSurveySession: preSurveySession)
         let defaults = eligibility.getDefaults(with: configuration)
         eligibility.setFirstSeenDate(defaults: defaults, date: nil)
         eligibility.setLastSurveyedDate(defaults: defaults, date: nil)
-        
+
         let configuration = EligibilityConfiguration(
             surveyContextId: "",
             enabled: true,
@@ -165,23 +165,23 @@ class ClientEligibilityTests: XCTestCase {
             forceDisplay: false,
             planLimitExhausted: false
         )
-        
+
         let passExpectation = expectation(description: "Pass")
         eligibility.doClientSideCheck(eligibilityConfiguration: configuration, passed: {
             passExpectation.fulfill()
-        }) { (failedStep) in
-            
+        }) { (_) in
+
         }
-        
+
         waitForExpectations(timeout: 0.3, handler: nil)
     }
-    
+
     func testFailOnNotPreviousSurveyedWithInitialDelay() {
         let eligibility = ClientEligibility(preSurveySession: preSurveySession)
         let defaults = eligibility.getDefaults(with: configuration)
         eligibility.setFirstSeenDate(defaults: defaults, date: nil)
         eligibility.setLastSurveyedDate(defaults: defaults, date: nil)
-        
+
         let configuration = EligibilityConfiguration(
             surveyContextId: "",
             enabled: true,
@@ -192,10 +192,10 @@ class ClientEligibilityTests: XCTestCase {
             forceDisplay: false,
             planLimitExhausted: false
         )
-        
+
         let failExpectation = expectation(description: "Fail")
         eligibility.doClientSideCheck(eligibilityConfiguration: configuration, passed: {
-            
+
         }) { (failedReason) in
             if case ClientEligibility.FailedReason.initialDelay = failedReason {
                 // Success
@@ -204,16 +204,16 @@ class ClientEligibilityTests: XCTestCase {
             }
             failExpectation.fulfill()
         }
-        
+
         waitForExpectations(timeout: 0.3, handler: nil)
     }
-    
+
     func testFailOnNotPreviousSurveyedButOverriddenCreatedAt() {
         let eligibility = ClientEligibility(preSurveySession: preSurveySession)
         let defaults = eligibility.getDefaults(with: configuration)
         eligibility.setFirstSeenDate(defaults: defaults, date: nil)
         eligibility.setLastSurveyedDate(defaults: defaults, date: nil)
-        
+
         var configuration = EligibilityConfiguration(
             surveyContextId: "",
             enabled: true,
@@ -224,14 +224,14 @@ class ClientEligibilityTests: XCTestCase {
             forceDisplay: false,
             planLimitExhausted: false
         )
-        
+
         let createdAt = Date().addingTimeInterval(-59)
         let overrides = EligibilityOverrides(createdAt: createdAt)
         configuration.apply(overrides: overrides)
-        
+
         let failExpectation = expectation(description: "Fail")
         eligibility.doClientSideCheck(overrides: overrides, eligibilityConfiguration: configuration, passed: {
-            
+
         }) { (failedReason) in
             if case ClientEligibility.FailedReason.initialDelay = failedReason {
                 // Success
@@ -240,16 +240,16 @@ class ClientEligibilityTests: XCTestCase {
             }
             failExpectation.fulfill()
         }
-        
+
         waitForExpectations(timeout: 0.3, handler: nil)
     }
-    
+
     func testFailOnNotPreviousSurveyedButInitialDelayInFuture() {
         let eligibility = ClientEligibility(preSurveySession: preSurveySession)
         let defaults = eligibility.getDefaults(with: configuration)
         eligibility.setFirstSeenDate(defaults: defaults, date: nil)
         eligibility.setLastSurveyedDate(defaults: defaults, date: nil)
-        
+
         let configuration = EligibilityConfiguration(
             surveyContextId: "",
             enabled: true,
@@ -260,10 +260,10 @@ class ClientEligibilityTests: XCTestCase {
             forceDisplay: false,
             planLimitExhausted: false
         )
-        
+
         let failExpectation = expectation(description: "Fail")
         eligibility.doClientSideCheck(eligibilityConfiguration: configuration, passed: {
-        
+
         }) { (failedReason) in
             if case ClientEligibility.FailedReason.initialDelay = failedReason {
                 // Success
@@ -272,18 +272,18 @@ class ClientEligibilityTests: XCTestCase {
             }
             failExpectation.fulfill()
         }
-        
+
         waitForExpectations(timeout: 0.3, handler: nil)
     }
-    
+
     func testPassOnNotPreviousSurveyedButInitialDelayInPast() {
         let dateAnHourAgo = Date().addingTimeInterval(-61)
-        
+
         let eligibility = ClientEligibility(preSurveySession: preSurveySession)
         let defaults = eligibility.getDefaults(with: configuration)
         eligibility.setFirstSeenDate(defaults: defaults, date: dateAnHourAgo)
         eligibility.setLastSurveyedDate(defaults: defaults, date: dateAnHourAgo)
-        
+
         let configuration = EligibilityConfiguration(
             surveyContextId: "",
             enabled: true,
@@ -294,25 +294,25 @@ class ClientEligibilityTests: XCTestCase {
             forceDisplay: false,
             planLimitExhausted: false
         )
-        
+
         let passExpectation = expectation(description: "Pass")
         eligibility.doClientSideCheck(eligibilityConfiguration: configuration, passed: {
             passExpectation.fulfill()
-        }) { (failedStep) in
-            
+        }) { (_) in
+
         }
-        
+
         waitForExpectations(timeout: 0.3, handler: nil)
     }
-    
+
     func testFailOnUnderRecurringTime() {
         let dateAnHourAgo = Date().addingTimeInterval(-59)
-        
+
         let eligibility = ClientEligibility(preSurveySession: preSurveySession)
         let defaults = eligibility.getDefaults(with: configuration)
         eligibility.setFirstSeenDate(defaults: defaults, date: dateAnHourAgo)
         eligibility.setLastSurveyedDate(defaults: defaults, date: dateAnHourAgo)
-        
+
         let configuration = EligibilityConfiguration(
             surveyContextId: "",
             enabled: true,
@@ -323,10 +323,10 @@ class ClientEligibilityTests: XCTestCase {
             forceDisplay: false,
             planLimitExhausted: false
         )
-        
+
         let failExpectation = expectation(description: "Fail")
         eligibility.doClientSideCheck(eligibilityConfiguration: configuration, passed: {
-            
+
         }) { (failedReason) in
             if case ClientEligibility.FailedReason.recurringPeriod = failedReason {
                 // Success
@@ -335,18 +335,18 @@ class ClientEligibilityTests: XCTestCase {
             }
             failExpectation.fulfill()
         }
-        
+
         waitForExpectations(timeout: 0.3, handler: nil)
     }
-    
+
     func testPassOnRecurring() {
         let dateAnHourAgo = Date().addingTimeInterval(-61)
-        
+
         let eligibility = ClientEligibility(preSurveySession: preSurveySession)
         let defaults = eligibility.getDefaults(with: configuration)
         eligibility.setFirstSeenDate(defaults: defaults, date: dateAnHourAgo)
         eligibility.setLastSurveyedDate(defaults: defaults, date: dateAnHourAgo)
-        
+
         let configuration = EligibilityConfiguration(
             surveyContextId: "",
             enabled: true,
@@ -357,25 +357,25 @@ class ClientEligibilityTests: XCTestCase {
             forceDisplay: false,
             planLimitExhausted: false
         )
-        
+
         let passExpectation = expectation(description: "Pass")
         eligibility.doClientSideCheck(eligibilityConfiguration: configuration, passed: {
             passExpectation.fulfill()
-        }) { (failedStep) in
-            
+        }) { (_) in
+
         }
-        
+
         waitForExpectations(timeout: 0.3, handler: nil)
     }
-    
+
     func testFailOnRecurringTimeLessThanMinimum() {
         let dateAnHourAgo = Date().addingTimeInterval(-61)
-        
+
         let eligibility = ClientEligibility(preSurveySession: preSurveySession)
         let defaults = eligibility.getDefaults(with: configuration)
         eligibility.setFirstSeenDate(defaults: defaults, date: dateAnHourAgo)
         eligibility.setLastSurveyedDate(defaults: defaults, date: dateAnHourAgo)
-        
+
         let configuration = EligibilityConfiguration(
             surveyContextId: "",
             enabled: true,
@@ -386,10 +386,10 @@ class ClientEligibilityTests: XCTestCase {
             forceDisplay: false,
             planLimitExhausted: false
         )
-        
+
         let failExpectation = expectation(description: "Fail")
         eligibility.doClientSideCheck(eligibilityConfiguration: configuration, passed: {
-            
+
         }) { (failedReason) in
             if case ClientEligibility.FailedReason.recurringLessThanMinimum = failedReason {
                 // Success
@@ -398,18 +398,18 @@ class ClientEligibilityTests: XCTestCase {
             }
             failExpectation.fulfill()
         }
-        
+
         waitForExpectations(timeout: 0.3, handler: nil)
     }
-    
+
     func testFailOnSampleFactor() {
         let dateAnHourAgo = Date().addingTimeInterval(-61)
-        
+
         let eligibility = ClientEligibility(preSurveySession: preSurveySession)
         let defaults = eligibility.getDefaults(with: configuration)
         eligibility.setFirstSeenDate(defaults: defaults, date: dateAnHourAgo)
         eligibility.setLastSurveyedDate(defaults: defaults, date: dateAnHourAgo)
-        
+
         let configuration = EligibilityConfiguration(
             surveyContextId: "",
             enabled: true,
@@ -420,14 +420,14 @@ class ClientEligibilityTests: XCTestCase {
             forceDisplay: false,
             planLimitExhausted: false
         )
-        
+
         let failExpectation = expectation(description: "Fail")
         eligibility.doClientSideCheck(eligibilityConfiguration: configuration, passed: {
-            
-        }) { (failedStep) in
+
+        }) { (_) in
             failExpectation.fulfill()
         }
-        
+
         waitForExpectations(timeout: 0.3, handler: nil)
     }
 

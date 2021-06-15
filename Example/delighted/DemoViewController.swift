@@ -3,12 +3,12 @@ import Delighted
 
 class DemoViewController: UIViewController {
     var example: Example?
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.isNavigationBarHidden = false
@@ -27,9 +27,9 @@ class DemoViewController: UIViewController {
             initialDelay: nil,
             recurringPeriod: nil
         )
-        
+
         Delighted.survey(delightedID: delightedID, person: person, properties: properties, options: options, eligibilityOverrides: eligibilityOverrides, inViewController: nil, callback: { [unowned self] (status) in
-            
+
             switch status {
             case let .failedClientEligibility(error):
                 print("failedClientEligibility: \(error)")
@@ -41,7 +41,7 @@ class DemoViewController: UIViewController {
             self.performSegue(withIdentifier: "unwindToExamples", sender: self)
         })
     }
-    
+
     func setExample(example: Example) {
         print("Showing example of \(example.label)")
         self.example = example
