@@ -60,19 +60,19 @@ class TintStateButton: UIButton {
 
 class Button: UIButton {
 
-    let configuration: Configuration
+    let surveyConfiguration: SurveyConfiguration
     let mode: Mode
 
     var theme: Theme {
-        return configuration.theme
+        return surveyConfiguration.theme
     }
 
     enum Mode {
         case primary, secondary, scale, button
     }
 
-    init(configuration: Configuration, mode: Mode) {
-        self.configuration = configuration
+    init(configuration: SurveyConfiguration, mode: Mode) {
+        self.surveyConfiguration = configuration
         self.mode = mode
         super.init(frame: .zero)
 
@@ -94,7 +94,7 @@ class Button: UIButton {
         case .circle:
             layer.cornerRadius = bounds.height / 2.0
         case .roundRect:
-            layer.cornerRadius = Configuration.cornerRadius
+            layer.cornerRadius = SurveyConfiguration.cornerRadius
         case .square:
             layer.cornerRadius = 0
         }
@@ -176,7 +176,7 @@ class Button: UIButton {
         rightInsetConstraint?.isActive = true
 
         layer.masksToBounds = true
-        titleLabel?.font = configuration.font(ofSize: 16)
+        titleLabel?.font = surveyConfiguration.font(ofSize: 16)
 
         let titleColorNormal: UIColor
         let titleColorHightlighted: UIColor?

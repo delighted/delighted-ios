@@ -2,7 +2,7 @@ import UIKit
 
 class CSATComponent: UIView, Component {
 
-    let configuration: Configuration
+    let configuration: SurveyConfiguration
     let minLabel: String
     let maxLabel: String
     let minNumber: Int
@@ -15,7 +15,7 @@ class CSATComponent: UIView, Component {
     typealias OnSelection = (Int) -> Void
     let onSelection: OnSelection
 
-    init(configuration: Configuration, minLabel: String, maxLabel: String, minNumber: Int, maxNumber: Int, onSelection: @escaping OnSelection) {
+    init(configuration: SurveyConfiguration, minLabel: String, maxLabel: String, minNumber: Int, maxNumber: Int, onSelection: @escaping OnSelection) {
         self.configuration = configuration
         self.minLabel = minLabel
         self.maxLabel = maxLabel

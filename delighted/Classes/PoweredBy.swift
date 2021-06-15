@@ -2,10 +2,10 @@ import UIKit
 
 class PoweredBy: UIButton {
 
-    let configuration: Configuration
+    let surveyConfiguration: SurveyConfiguration
 
-    init(configuration: Configuration) {
-        self.configuration = configuration
+    init(configuration: SurveyConfiguration) {
+        self.surveyConfiguration = configuration
         super.init(frame: CGRect.zero)
         setupView()
     }
@@ -20,8 +20,8 @@ class PoweredBy: UIButton {
 
     private func setupView() {
         translatesAutoresizingMaskIntoConstraints = false
-        setTitle(configuration.poweredByLinkText, for: .normal)
-        setTitleColor(configuration.theme.secondaryTextColor.color, for: .normal)
+        setTitle(surveyConfiguration.poweredByLinkText, for: .normal)
+        setTitleColor(surveyConfiguration.theme.secondaryTextColor.color, for: .normal)
         titleLabel?.numberOfLines = 1
         titleLabel?.textAlignment = .center
         titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .light)
@@ -30,7 +30,7 @@ class PoweredBy: UIButton {
     }
 
     @objc func onTap() {
-        if let url = URL(string: configuration.poweredByLinkURL), UIApplication.shared.canOpenURL(url) {
+        if let url = URL(string: surveyConfiguration.poweredByLinkURL), UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:])
         }
     }

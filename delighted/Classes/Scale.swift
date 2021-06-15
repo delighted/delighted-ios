@@ -1,7 +1,7 @@
 import UIKit
 
 class Scale: UIView {
-    let configuration: Configuration
+    let configuration: SurveyConfiguration
     let minLabel: String
     let maxLabel: String
 
@@ -15,7 +15,7 @@ class Scale: UIView {
     typealias OnSelection = (Int) -> Void
     let onSelection: OnSelection
 
-    init(configuration: Configuration, minLabel: String, maxLabel: String, minNumber: Int, maxNumber: Int, onSelection: @escaping OnSelection) {
+    init(configuration: SurveyConfiguration, minLabel: String, maxLabel: String, minNumber: Int, maxNumber: Int, onSelection: @escaping OnSelection) {
         self.configuration = configuration
         self.minLabel = minLabel
         self.maxLabel = maxLabel

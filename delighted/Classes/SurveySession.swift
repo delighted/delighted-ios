@@ -60,12 +60,12 @@ class SurveySession: Session {
 
     let surveyRequest: SurveyRequest
     var surveyResponse: SurveyResponse
-    let configuration: Configuration
+    let configuration: SurveyConfiguration
     var status = DelightedSurveyResponseStatus.unanswered
 
     var pusher: Pusher?
 
-    init(preSurveySession: PreSurveySession, surveyRequest: SurveyRequest, surveyResponse: SurveyResponse, configuration: Configuration) {
+    init(preSurveySession: PreSurveySession, surveyRequest: SurveyRequest, surveyResponse: SurveyResponse, configuration: SurveyConfiguration) {
         self.delightedID = preSurveySession.delightedID
         self.baseURL = preSurveySession.baseURL
         self.cdnURL = preSurveySession.cdnURL
