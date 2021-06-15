@@ -31,7 +31,7 @@ class PoweredBy: UIButton {
 
     @objc func onTap() {
         if let url = URL(string: surveyConfiguration.poweredByLinkURL), UIApplication.shared.canOpenURL(url) {
-            UIApplication.shared.openURL(url)
+            UIApplication.shared.open(url, options: [:])
         }
     }
 }
