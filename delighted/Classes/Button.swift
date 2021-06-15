@@ -60,11 +60,11 @@ class TintStateButton: UIButton {
 
 class Button: UIButton {
 
-    let buttonConfiguration: SurveyConfiguration
+    let surveyConfiguration: SurveyConfiguration
     let mode: Mode
 
     var theme: Theme {
-        return buttonConfiguration.theme
+        return surveyConfiguration.theme
     }
 
     enum Mode {
@@ -72,7 +72,7 @@ class Button: UIButton {
     }
 
     init(configuration: SurveyConfiguration, mode: Mode) {
-        self.buttonConfiguration = configuration
+        self.surveyConfiguration = configuration
         self.mode = mode
         super.init(frame: .zero)
 
@@ -176,7 +176,7 @@ class Button: UIButton {
         rightInsetConstraint?.isActive = true
 
         layer.masksToBounds = true
-        titleLabel?.font = buttonConfiguration.font(ofSize: 16)
+        titleLabel?.font = surveyConfiguration.font(ofSize: 16)
 
         let titleColorNormal: UIColor
         let titleColorHightlighted: UIColor?
