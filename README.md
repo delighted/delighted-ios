@@ -35,7 +35,7 @@ source "https://github.com/CocoaPods/Specs.git"
 platform :ios, "11.0"
 use_frameworks!
 
-pod "Delighted", "~> 1.0.3"
+pod "Delighted", "~> 1.1.0"
 ```
 
 Then run:
@@ -53,7 +53,7 @@ To integrate Delighted into your Xcode project using Carthage, specify it in
 your `Cartfile`:
 
 ```
-github "delighted/delighted-ios" >= 1.0.3
+github "delighted/delighted-ios" >= 1.1.0
 ```
 
 ## Getting started
