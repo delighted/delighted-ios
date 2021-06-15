@@ -149,7 +149,7 @@ public class SurveyViewController: UIViewController, DelightedPageViewController
             component = StarsComponent(theme: theme, onSelection: self.onSelection)
         case .thumbs:
             component = ThumbsComponent(theme: theme, onSelection: self.onSelection)
-        case .nps:
+        case .nps, .enps:
             component = NPSComponent(
                 configuration: configuration,
                 minLabel: configuration.notLikelyText,

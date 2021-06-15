@@ -54,6 +54,10 @@ class ExamplesViewController: UITableViewController {
             Example(
                 label: "Thumbs",
                 delightedID: "mobile-sdk-bdN0fT9GZpXsMqxI"
+            ),
+            Example(
+                label: "eNPS",
+                delightedID: "mobile-sdk-cJmG8vTg0CDPazwF"
             )
         ],
         .other: [

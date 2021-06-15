@@ -671,12 +671,93 @@ final class DelightedTests: XCTestCase {
         }
     }
 
+    func testENPS() {
+        let data = loadJSONData(filename: "sample_enps")!
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+
+        do {
+            let surveyRequest = try decoder.decode(SurveyRequest.self, from: data)
+
+            // Token
+            XCTAssertNotNil(surveyRequest)
+            XCTAssertNotNil(surveyRequest.token)
+            XCTAssertEqual(surveyRequest.token, "h0H9InsLQO0Rqs3dfW4qoNue")
+
+            // Survey type
+            XCTAssertEqual(surveyRequest.survey.type.groups.count, 3)
+            XCTAssertEqual(surveyRequest.survey.type.id, .enps)
+            let promoter = surveyRequest.survey.type.groups.first { (group) -> Bool in
+                return group.name == "promoter"
+            }
+            let passive = surveyRequest.survey.type.groups.first { (group) -> Bool in
+                return group.name == "passive"
+            }
+            let detractor = surveyRequest.survey.type.groups.first { (group) -> Bool in
+                return group.name == "detractor"
+            }
+
+            XCTAssertEqual(promoter!.name, "promoter")
+            XCTAssertEqual(promoter!.scoreMin, 9)
+            XCTAssertEqual(promoter!.scoreMax, 10)
+
+            XCTAssertEqual(passive!.name, "passive")
+            XCTAssertEqual(passive!.scoreMin, 7)
+            XCTAssertEqual(passive!.scoreMax, 8)
+
+            XCTAssertEqual(detractor!.name, "detractor")
+            XCTAssertEqual(detractor!.scoreMin, 0)
+            XCTAssertEqual(detractor!.scoreMax, 6)
+
+            // Survey configuration
+            let configuration = surveyRequest.survey.configuration
+            XCTAssertEqual(configuration.textBaseDirection, .ltr)
+            XCTAssertEqual(configuration.poweredByLinkText, "Powered by Delighted")
+            XCTAssertEqual(configuration.poweredByLinkURL, "https://delighted.com/?utm_campaign=mobile_sdk_powered1&utm_content=badge&utm_medium=web&utm_source=delighted_mobile_sdk")
+            XCTAssertEqual(configuration.nextText, "Next")
+            XCTAssertEqual(configuration.prevText, "Previous")
+            XCTAssertEqual(configuration.selectOneText, "Select one option")
+            XCTAssertEqual(configuration.selectManyText, "Select one or more options")
+            XCTAssertEqual(configuration.submitText, "Submit")
+            XCTAssertEqual(configuration.doneText, "Done")
+            XCTAssertEqual(configuration.notLikelyText, "Not likely")
+            XCTAssertEqual(configuration.veryLikelyText, "Very likely")
+
+            // Pusher
+            let pusher = configuration.pusher
+            XCTAssertEqual(pusher.webSocketUrl, "wss://example.com/ws")
+            XCTAssertEqual(pusher.enabled, false)
+            XCTAssertEqual(pusher.channelName, "private-channel")
+
+            // Theme
+            let theme = configuration.theme
+            XCTAssertNotNil(theme)
+
+            // Survey template
+            let template = surveyRequest.survey.template
+            XCTAssertEqual(template.questionText, "How likely are you to recommend working at Hem & Stitch to a friend or colleague?")
+            let commentPrompts = surveyRequest.survey.template.commentPrompts
+            XCTAssertEqual(commentPrompts.count, 11)
+
+            let additionalQuestions = template.additionalQuestions
+            XCTAssertEqual(additionalQuestions.count, 0)
+
+            // Thank you
+            let thankYou = surveyRequest.thankYou
+            XCTAssertEqual(thankYou.text, "Thanks, we really appreciate your feedback.")
+        } catch {
+            print(error.localizedDescription)
+            XCTFail("Failed to create surveyRequest")
+        }
+    }
+
     static var allTests = [
         ("testNPS", testNPS),
         ("testFiveStar", testFiveStar),
         ("testCSAT", testCSAT),
         ("testCES", testCES),
         ("testSmileys", testSmileys),
-        ("testThumbs", testThumbs)
+        ("testThumbs", testThumbs),
+        ("testENPS", testENPS)
     ]
 }

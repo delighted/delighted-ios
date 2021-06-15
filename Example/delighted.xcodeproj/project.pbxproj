@@ -23,6 +23,7 @@
 		E9B0643E239A2F3900A8C504 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B0643D239A2F3900A8C504 /* DemoViewController.swift */; };
 		E9B06445239B445600A8C504 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9B06444239B445600A8C504 /* LaunchScreen.storyboard */; };
 		E9B06447239D77D800A8C504 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B06446239D77D800A8C504 /* Colors.swift */; };
+		E9B61D8726791DF90099A0CB /* sample_enps.json in Resources */ = {isa = PBXBuildFile; fileRef = E9B61D8626791DF90099A0CB /* sample_enps.json */; };
 		EDBEA8178DE5C2F68929F4F4 /* Pods_delighted_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 731BD9F428A83D8BD0943D73 /* Pods_delighted_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		E9B0643D239A2F3900A8C504 /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
 		E9B06444239B445600A8C504 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9B06446239D77D800A8C504 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		E9B61D8626791DF90099A0CB /* sample_enps.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample_enps.json; sourceTree = "<group>"; };
 		FAD2B7F2AC1685D510967AE8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +92,7 @@
 		038E0386233E570200366AA1 /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
+				E9B61D8626791DF90099A0CB /* sample_enps.json */,
 				038E0373233E52CB00366AA1 /* sample_ces.json */,
 				038E036E233E52CB00366AA1 /* sample_csat.json */,
 				038E0371233E52CB00366AA1 /* sample_five_star.json */,
@@ -298,6 +301,7 @@
 				038E0385233E52DF00366AA1 /* sample_thumbs.json in Resources */,
 				038E0384233E52DF00366AA1 /* sample_smileys.json in Resources */,
 				038E0381233E52DF00366AA1 /* sample_csat.json in Resources */,
+				E9B61D8726791DF90099A0CB /* sample_enps.json in Resources */,
 				038E0383233E52DF00366AA1 /* sample_nps.json in Resources */,
 				038E0382233E52DF00366AA1 /* sample_five_star.json in Resources */,
 				038E0380233E52DF00366AA1 /* sample_ces.json in Resources */,
