@@ -1,30 +1,30 @@
 import UIKit
 
 class TextArea: UIView, Component {
-    typealias OnSelection = (String) -> ()
+    typealias OnSelection = (String) -> Void
     let onSelection: OnSelection
-    
+
     let configuration: Configuration
-    
+
     var theme: Theme {
         return configuration.theme
     }
-    
+
     init(configuration: Configuration, onSelection: @escaping OnSelection) {
         self.configuration = configuration
         self.onSelection = onSelection
         super.init(frame: CGRect.zero)
         setupView()
     }
-    
+
     override init(frame: CGRect) {
         fatalError()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError()
     }
-    
+
     private lazy var textView: UITextView = {
         let textView = UITextView()
         textView.translatesAutoresizingMaskIntoConstraints = false
@@ -36,7 +36,7 @@ class TextArea: UIView, Component {
         textView.backgroundColor = theme.textarea.backgroundColor.color
         textView.textContainerInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
         textView.delegate = self
-        
+
         switch configuration.theme.ios.keyboardAppearance {
         case .light?:
             textView.keyboardAppearance = .light
@@ -45,18 +45,18 @@ class TextArea: UIView, Component {
         case nil:
             ()
         }
-        
+
         return textView
     }()
-    
+
     @discardableResult
     override func becomeFirstResponder() -> Bool {
         return textView.becomeFirstResponder()
     }
-    
+
     private func setupView() {
         self.addSubview(textView)
-        
+
         NSLayoutConstraint.activate([
             textView.topAnchor.constraint(equalTo: self.topAnchor),
             textView.leadingAnchor.constraint(equalTo: self.leadingAnchor),

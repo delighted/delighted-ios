@@ -12,7 +12,7 @@ struct EligibilityConfiguration {
 }
 
 extension EligibilityConfiguration: Decodable {
-    
+
 }
 
 extension EligibilityConfiguration {
@@ -24,7 +24,7 @@ extension EligibilityConfiguration {
         if let recurringPeriod = overrides?.recurringPeriod {
             self.recurringSurveyPeriod = recurringPeriod
         }
-        
+
         return self
     }
 }
@@ -34,14 +34,14 @@ extension EligibilityConfiguration {
     public let createdAt: Date?
     public let initialDelay: Int?
     public let recurringPeriod: Int?
-    
+
     @objc public init(testMode: Bool = false, createdAt: Date? = nil) {
         self.testMode = testMode
         self.createdAt = createdAt
         self.initialDelay = nil
         self.recurringPeriod = nil
     }
-    
+
     public init(testMode: Bool = false, createdAt: Date? = nil, initialDelay: Int? = nil, recurringPeriod: Int? = nil) {
         self.testMode = testMode
         self.createdAt = createdAt

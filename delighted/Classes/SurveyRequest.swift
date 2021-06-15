@@ -5,7 +5,7 @@ struct SurveyRequestBody: Encodable {
     let person: Person?
     let properties: Properties?
     let testMode: Bool
-    
+
     init(token: String? = nil, person: Person? = nil, properties: Properties? = nil, testMode: Bool? = nil) {
         self.token = token
         self.person = person

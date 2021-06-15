@@ -12,10 +12,10 @@ struct ViewLayout {
         stackView.alignment = .fill
         stackView.spacing = spacing
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        
+
         return stackView
     }
-    
+
     static func createCenterHorizontalStackView(subviews: [UIView], alignment: UIStackView.Alignment = .center, distribution: UIStackView.Distribution = .fillEqually, spacing: CGFloat = 5) -> UIStackView {
         let stackView = UIStackView(arrangedSubviews: subviews)
         stackView.axis = .horizontal
@@ -23,7 +23,7 @@ struct ViewLayout {
         stackView.alignment = alignment
         stackView.spacing = spacing
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        
+
         return stackView
     }
 }
@@ -34,7 +34,7 @@ extension UIView {
             self.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -(edges?.right ?? 0)),
             self.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: edges?.left ?? 0),
             self.topAnchor.constraint(equalTo: view.topAnchor, constant: edges?.top ?? 0),
-            self.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -(edges?.bottom ?? 0)),
+            self.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -(edges?.bottom ?? 0))
         ])
     }
 }
@@ -50,7 +50,7 @@ extension UIView {
                            constant: constant)
         setConstraint(constraint: constraint)
     }
-    
+
     func width(constant: CGFloat) {
         let constraint = NSLayoutConstraint(item: self,
                                             attribute: .width,
@@ -62,7 +62,7 @@ extension UIView {
         constraint.priority = .defaultHigh
         setConstraint(constraint: constraint)
     }
-    
+
     func heightEqualWidth() {
         let constraint = NSLayoutConstraint(item: self,
                                             attribute: .height,
@@ -74,7 +74,7 @@ extension UIView {
         constraint.priority = .defaultHigh
         setConstraint(constraint: constraint)
     }
-    
+
     private func removeConstraint(attribute: NSLayoutConstraint.Attribute) {
         constraints.forEach {
             if $0.firstAttribute == attribute {
@@ -82,7 +82,7 @@ extension UIView {
             }
         }
     }
-    
+
     private func setConstraint(constraint: NSLayoutConstraint) {
         removeConstraint(attribute: constraint.firstAttribute)
         self.addConstraint(constraint)
