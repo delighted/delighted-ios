@@ -3,7 +3,7 @@ import UIKit
 public class ThankYouViewController: UIViewController, DelightedPageViewControllerPage {
     let pageViewController: DelightedPageViewController
     let session: SurveySession
-    
+
     var configuration: ButtonConfiguration {
         return session.configuration
     }

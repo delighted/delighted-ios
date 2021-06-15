@@ -64,7 +64,7 @@ class SurveySession: Session {
     var status = DelightedSurveyResponseStatus.unanswered
 
     var pusher: Pusher?
-    
+
     init(preSurveySession: PreSurveySession, surveyRequest: SurveyRequest, surveyResponse: SurveyResponse, configuration: ButtonConfiguration) {
         self.delightedID = preSurveySession.delightedID
         self.baseURL = preSurveySession.baseURL

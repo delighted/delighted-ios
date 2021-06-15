@@ -33,7 +33,7 @@ class NPSComponent: UIView, Component {
     // Constants for growing/shrinking of thumb size
     private let thumbNormalSize: CGFloat = 40
     private let thumbSelectedSize: CGFloat = 50
-    
+
     init(configuration: ButtonConfiguration, minLabel: String, maxLabel: String, minNumber: Int, maxNumber: Int, onSelection: @escaping OnSelection) {
         self.configuration = configuration
         self.minLabel = minLabel

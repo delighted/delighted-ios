@@ -3,13 +3,13 @@ import UIKit
 class TextArea: UIView, Component {
     typealias OnSelection = (String) -> Void
     let onSelection: OnSelection
-    
+
     let configuration: ButtonConfiguration
-    
+
     var theme: Theme {
         return configuration.theme
     }
-    
+
     init(configuration: ButtonConfiguration, onSelection: @escaping OnSelection) {
         self.configuration = configuration
         self.onSelection = onSelection

@@ -1,7 +1,7 @@
 import UIKit
 
 class CSATComponent: UIView, Component {
-    
+
     let configuration: ButtonConfiguration
     let minLabel: String
     let maxLabel: String

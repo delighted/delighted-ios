@@ -3,7 +3,7 @@ import UIKit
 class PoweredBy: UIButton {
 
     let buttonConfiguration: ButtonConfiguration
-    
+
     init(configuration: ButtonConfiguration) {
         self.buttonConfiguration = configuration
         super.init(frame: CGRect.zero)

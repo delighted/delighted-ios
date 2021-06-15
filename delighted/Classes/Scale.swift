@@ -14,7 +14,7 @@ class Scale: UIView {
 
     typealias OnSelection = (Int) -> Void
     let onSelection: OnSelection
-    
+
     init(configuration: ButtonConfiguration, minLabel: String, maxLabel: String, minNumber: Int, maxNumber: Int, onSelection: @escaping OnSelection) {
         self.configuration = configuration
         self.minLabel = minLabel

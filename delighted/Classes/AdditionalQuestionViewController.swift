@@ -11,7 +11,7 @@ public class AdditionalQuestionViewController: UIViewController, DelightedPageVi
     var survey: Survey {
         return session.surveyRequest.survey
     }
-    
+
     var configuration: ButtonConfiguration {
         return session.configuration
     }

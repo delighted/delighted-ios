@@ -17,7 +17,7 @@ class OptionSelect: UIView {
     enum Mode {
         case single, multi
     }
-    
+
     init(configuration: ButtonConfiguration, question: Survey.Template.AdditionalQuestion, mode: Mode, onSelection: @escaping OnSelection) {
         self.configuration = configuration
         self.question = question
