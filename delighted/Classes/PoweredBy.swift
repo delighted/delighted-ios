@@ -2,9 +2,9 @@ import UIKit
 
 class PoweredBy: UIButton {
 
-    let buttonConfiguration: ButtonConfiguration
+    let buttonConfiguration: SurveyConfiguration
 
-    init(configuration: ButtonConfiguration) {
+    init(configuration: SurveyConfiguration) {
         self.buttonConfiguration = configuration
         super.init(frame: CGRect.zero)
         setupView()

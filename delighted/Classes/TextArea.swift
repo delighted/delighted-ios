@@ -4,13 +4,13 @@ class TextArea: UIView, Component {
     typealias OnSelection = (String) -> Void
     let onSelection: OnSelection
 
-    let configuration: ButtonConfiguration
+    let configuration: SurveyConfiguration
 
     var theme: Theme {
         return configuration.theme
     }
 
-    init(configuration: ButtonConfiguration, onSelection: @escaping OnSelection) {
+    init(configuration: SurveyConfiguration, onSelection: @escaping OnSelection) {
         self.configuration = configuration
         self.onSelection = onSelection
         super.init(frame: CGRect.zero)
@@ -30,7 +30,7 @@ class TextArea: UIView, Component {
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.layer.borderColor = theme.textarea.borderColor.color.cgColor
         textView.layer.borderWidth = 1
-        textView.layer.cornerRadius = ButtonConfiguration.cornerRadius
+        textView.layer.cornerRadius = SurveyConfiguration.cornerRadius
         textView.font = configuration.font(ofSize: 18)
         textView.textColor = theme.textarea.textColor.color
         textView.backgroundColor = theme.textarea.backgroundColor.color

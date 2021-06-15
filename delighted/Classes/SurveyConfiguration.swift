@@ -86,7 +86,7 @@ public class Options: NSObject {
     }
 }
 
-public struct ButtonConfiguration {
+public struct SurveyConfiguration {
     static let cornerRadius: CGFloat = 8.0
 
     // From API
@@ -157,7 +157,7 @@ public struct ButtonConfiguration {
     }
 }
 
-extension ButtonConfiguration: Decodable {
+extension SurveyConfiguration: Decodable {
     enum CodingKeys: CodingKey {
         case textBaseDirection, poweredByLinkText, poweredByLinkUrl,
         nextText, prevText, selectOneText, selectManyText,
@@ -192,7 +192,7 @@ extension ButtonConfiguration: Decodable {
     }
 }
 
-extension ButtonConfiguration {
+extension SurveyConfiguration {
     func font(ofSize: CGFloat) -> UIFont {
         return UIFont(name: fontFamilyName, size: ofSize) ?? UIFont.systemFont(ofSize: ofSize)
     }

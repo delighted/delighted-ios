@@ -7,7 +7,7 @@ public class SurveyViewController: UIViewController, DelightedPageViewController
     var survey: Survey {
         return session.surveyRequest.survey
     }
-    var configuration: ButtonConfiguration {
+    var configuration: SurveyConfiguration {
         return session.configuration
     }
 
@@ -185,7 +185,7 @@ public class SurveyViewController: UIViewController, DelightedPageViewController
 
         textView.layer.borderColor = theme.textarea.borderColor.color.cgColor
         textView.layer.borderWidth = 1
-        textView.layer.cornerRadius = ButtonConfiguration.cornerRadius
+        textView.layer.cornerRadius = SurveyConfiguration.cornerRadius
         textView.font = configuration.font(ofSize: 18)
         textView.textColor = theme.textarea.textColor.color
         textView.backgroundColor = theme.textarea.backgroundColor.color

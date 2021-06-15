@@ -60,7 +60,7 @@ class TintStateButton: UIButton {
 
 class Button: UIButton {
 
-    let buttonConfiguration: ButtonConfiguration
+    let buttonConfiguration: SurveyConfiguration
     let mode: Mode
 
     var theme: Theme {
@@ -71,7 +71,7 @@ class Button: UIButton {
         case primary, secondary, scale, button
     }
 
-    init(configuration: ButtonConfiguration, mode: Mode) {
+    init(configuration: SurveyConfiguration, mode: Mode) {
         self.buttonConfiguration = configuration
         self.mode = mode
         super.init(frame: .zero)
@@ -94,7 +94,7 @@ class Button: UIButton {
         case .circle:
             layer.cornerRadius = bounds.height / 2.0
         case .roundRect:
-            layer.cornerRadius = ButtonConfiguration.cornerRadius
+            layer.cornerRadius = SurveyConfiguration.cornerRadius
         case .square:
             layer.cornerRadius = 0
         }

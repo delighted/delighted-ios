@@ -4,7 +4,7 @@ public class ThankYouViewController: UIViewController, DelightedPageViewControll
     let pageViewController: DelightedPageViewController
     let session: SurveySession
 
-    var configuration: ButtonConfiguration {
+    var configuration: SurveyConfiguration {
         return session.configuration
     }
 

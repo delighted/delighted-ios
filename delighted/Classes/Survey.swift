@@ -3,7 +3,7 @@ import Foundation
 // Public only for testing
 public struct Survey: Decodable {
     let type: SurveyType
-    let configuration: ButtonConfiguration
+    let configuration: SurveyConfiguration
     let template: Template
 
     public struct SurveyType: Decodable {

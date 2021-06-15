@@ -1,7 +1,7 @@
 import UIKit
 
 class NPSComponent: UIView, Component {
-    let configuration: ButtonConfiguration
+    let configuration: SurveyConfiguration
     let minLabel: String
     let maxLabel: String
 
@@ -34,7 +34,7 @@ class NPSComponent: UIView, Component {
     private let thumbNormalSize: CGFloat = 40
     private let thumbSelectedSize: CGFloat = 50
 
-    init(configuration: ButtonConfiguration, minLabel: String, maxLabel: String, minNumber: Int, maxNumber: Int, onSelection: @escaping OnSelection) {
+    init(configuration: SurveyConfiguration, minLabel: String, maxLabel: String, minNumber: Int, maxNumber: Int, onSelection: @escaping OnSelection) {
         self.configuration = configuration
         self.minLabel = minLabel
         self.maxLabel = maxLabel

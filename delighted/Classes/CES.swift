@@ -2,7 +2,7 @@ import UIKit
 
 class CESComponent: UIView, Component {
 
-    let configuration: ButtonConfiguration
+    let configuration: SurveyConfiguration
     let minLabel: String
     let maxLabel: String
 
@@ -16,7 +16,7 @@ class CESComponent: UIView, Component {
     typealias OnSelection = (Int) -> Void
     let onSelection: OnSelection
 
-    init(configuration: ButtonConfiguration, minLabel: String, maxLabel: String, minNumber: Int, maxNumber: Int, onSelection: @escaping OnSelection) {
+    init(configuration: SurveyConfiguration, minLabel: String, maxLabel: String, minNumber: Int, maxNumber: Int, onSelection: @escaping OnSelection) {
         self.configuration = configuration
         self.minLabel = minLabel
         self.maxLabel = maxLabel
