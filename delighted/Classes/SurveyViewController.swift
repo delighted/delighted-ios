@@ -144,11 +144,11 @@ public class SurveyViewController: UIViewController, DelightedPageViewController
                 onSelection: self.onSelection
             )
         case .smileys:
-            component = SmileysComponent(theme: theme, onSelection: self.onSelection)
+            component = SmileysComponent(configuration: configuration, onSelection: self.onSelection)
         case .starsFive:
-            component = StarsComponent(theme: theme, onSelection: self.onSelection)
+            component = StarsComponent(configuration: configuration, onSelection: self.onSelection)
         case .thumbs:
-            component = ThumbsComponent(theme: theme, onSelection: self.onSelection)
+            component = ThumbsComponent(configuration: configuration, onSelection: self.onSelection)
         case .nps, .enps:
             component = NPSComponent(
                 configuration: configuration,
@@ -158,6 +158,8 @@ public class SurveyViewController: UIViewController, DelightedPageViewController
                 maxNumber: 10,
                 onSelection: self.onSelection
             )
+        case .pmf:
+            component = PMFComponent(configuration: configuration, template: survey.template, onSelection: self.onSelection)
         }
 
         component.translatesAutoresizingMaskIntoConstraints = false

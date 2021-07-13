@@ -29,7 +29,7 @@ public struct Survey: Decodable {
         }
 
         public enum ID: String, Decodable {
-            case csat, ces, smileys, starsFive = "stars_five", thumbs, nps, enps
+            case csat, ces, smileys, starsFive = "stars_five", thumbs, nps, enps, pmf
         }
 
         public struct Group {
@@ -45,16 +45,24 @@ public struct Survey: Decodable {
 
     public struct Template: Decodable {
         let questionText: String
+        let scoreText: [String: String]?
         let commentPrompts: [String: String]
         let additionalQuestions: [AdditionalQuestion]
 
         enum CodingKeys: CodingKey {
-            case questionText, commentPrompts, additionalQuestions
+            case questionText, scoreText, commentPrompts, additionalQuestions
         }
 
         public init(from decoder: Decoder) throws {
             let container = try decoder.container(keyedBy: CodingKeys.self)
             questionText = try container.decode(String.self, forKey: .questionText)
+
+            if container.contains(.scoreText) {
+                scoreText = try container.decode([String: String].self, forKey: .scoreText)
+            } else {
+                scoreText = [:]
+            }
+
             commentPrompts = try container.decode([String: String].self, forKey: .commentPrompts)
 
             if container.contains(.additionalQuestions) {

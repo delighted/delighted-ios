@@ -751,6 +751,86 @@ final class DelightedTests: XCTestCase {
         }
     }
 
+    func testPMF() {
+        let data = loadJSONData(filename: "sample_pmf")!
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+
+        do {
+            let surveyRequest = try decoder.decode(SurveyRequest.self, from: data)
+
+            // Token
+            XCTAssertNotNil(surveyRequest)
+            XCTAssertNotNil(surveyRequest.token)
+            XCTAssertEqual(surveyRequest.token, "test-144092")
+
+            // Survey type
+            XCTAssertEqual(surveyRequest.survey.type.groups.count, 3)
+            XCTAssertEqual(surveyRequest.survey.type.id, .pmf)
+
+            let veryDisappointed = surveyRequest.survey.type.groups.first { (group) -> Bool in
+                return group.name == "very_disappointed"
+            }
+            let mildlyDisappointed = surveyRequest.survey.type.groups.first { (group) -> Bool in
+                return group.name == "mildly_disappointed"
+            }
+            let notDisappointed = surveyRequest.survey.type.groups.first { (group) -> Bool in
+                return group.name == "not_disappointed"
+            }
+
+            XCTAssertEqual(veryDisappointed!.name, "very_disappointed")
+            XCTAssertEqual(veryDisappointed!.scoreMin, 3)
+            XCTAssertEqual(veryDisappointed!.scoreMax, 3)
+
+            XCTAssertEqual(mildlyDisappointed!.name, "mildly_disappointed")
+            XCTAssertEqual(mildlyDisappointed!.scoreMin, 2)
+            XCTAssertEqual(mildlyDisappointed!.scoreMax, 2)
+
+            XCTAssertEqual(notDisappointed!.name, "not_disappointed")
+            XCTAssertEqual(notDisappointed!.scoreMin, 1)
+            XCTAssertEqual(notDisappointed!.scoreMax, 1)
+
+            // Survey configuration
+            let configuration = surveyRequest.survey.configuration
+            XCTAssertEqual(configuration.textBaseDirection, .ltr)
+            XCTAssertEqual(configuration.poweredByLinkText, "Powered by Delighted")
+            XCTAssertEqual(configuration.poweredByLinkURL, "https://delighted.com/?utm_campaign=mobile_sdk_powered1&utm_content=badge&utm_medium=web&utm_source=delighted_mobile_sdk")
+            XCTAssertEqual(configuration.nextText, "Next")
+            XCTAssertEqual(configuration.prevText, "Previous")
+            XCTAssertEqual(configuration.selectOneText, "Select one option")
+            XCTAssertEqual(configuration.selectManyText, "Select one or more options")
+            XCTAssertEqual(configuration.submitText, "Submit")
+            XCTAssertEqual(configuration.doneText, "Done")
+            XCTAssertEqual(configuration.notLikelyText, "Not disappointed")
+            XCTAssertEqual(configuration.veryLikelyText, "Very disappointed")
+
+            // Survey template
+            let template = surveyRequest.survey.template
+            XCTAssertEqual(template.questionText, "How would you feel if you could no longer use Hem & Stitch for iOS?")
+
+            let commentPrompts = surveyRequest.survey.template.commentPrompts
+            XCTAssertEqual(commentPrompts.count, 3)
+
+            let scoreText = surveyRequest.survey.template.scoreText
+            XCTAssertEqual(scoreText!.count, 3)
+            XCTAssertEqual(scoreText!["1"], "Not disappointed")
+            XCTAssertEqual(scoreText!["2"], "Mildly disappointed")
+            XCTAssertEqual(scoreText!["3"], "Very disappointed")
+
+            let additionalQuestions = template.additionalQuestions
+            XCTAssertEqual(additionalQuestions.count, 0)
+
+            // Thank you
+            let thankYou = surveyRequest.thankYou
+            XCTAssertEqual(thankYou.text, "Thanks, we really appreciate your feedback.")
+
+            XCTAssertEqual(surveyRequest.thankYou.groups.count, 0)
+        } catch {
+            print(error.localizedDescription)
+            XCTFail("Failed to create surveyRequest")
+        }
+    }
+
     static var allTests = [
         ("testNPS", testNPS),
         ("testFiveStar", testFiveStar),
@@ -758,6 +838,7 @@ final class DelightedTests: XCTestCase {
         ("testCES", testCES),
         ("testSmileys", testSmileys),
         ("testThumbs", testThumbs),
-        ("testENPS", testENPS)
+        ("testENPS", testENPS),
+        ("testPMF", testPMF)
     ]
 }

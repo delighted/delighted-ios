@@ -1,21 +1,23 @@
 import UIKit
 
-class SmileysComponent: UIView, Component {
+class PMFComponent: UIView, Component {
     enum Value {
         case veryUnhappy, unhappy, neutral, happy, veryHappy
     }
 
     let configuration: SurveyConfiguration
+    let template: Survey.Template
 
     var theme: Theme {
         return configuration.theme
     }
 
-    typealias OnSelection = (Int) -> Void
+    typealias OnSelection = (Int) -> ()
     let onSelection: OnSelection
 
-    init(configuration: SurveyConfiguration, onSelection: @escaping OnSelection) {
+    init(configuration: SurveyConfiguration, template: Survey.Template, onSelection: @escaping OnSelection) {
         self.configuration = configuration
+        self.template = template
         self.onSelection = onSelection
         super.init(frame: CGRect.zero)
         setupView()
@@ -31,11 +33,9 @@ class SmileysComponent: UIView, Component {
 
     private lazy var buttons: [UIButton] = {
         return [
-            makeButton(image: Images.smileyVeryUnhappy.image),
-            makeButton(image: Images.smileyUnhappy.image),
-            makeButton(image: Images.smileyNeutral.image),
-            makeButton(image: Images.smileyHappy.image),
-            makeButton(image: Images.smileyVeryHappy.image)
+            makeButton(image: Images.smileyNeutral.image, title: template.scoreText!["1"]!),
+            makeButton(image: Images.smileyUnhappy.image, title: template.scoreText!["2"]!),
+            makeButton(image: Images.smileyVeryDisappointed.image, title: template.scoreText!["3"]!)
         ]
     }()
 
@@ -43,7 +43,7 @@ class SmileysComponent: UIView, Component {
         let component = ViewLayout.createCenterHorizontalStackView(subviews: buttons)
         component.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(component)
-
+        component.alignment = .top
         NSLayoutConstraint.activate([
             component.topAnchor.constraint(equalTo: self.topAnchor),
             component.leadingAnchor.constraint(greaterThanOrEqualTo: self.leadingAnchor),
@@ -53,7 +53,7 @@ class SmileysComponent: UIView, Component {
         ])
     }
 
-    private func makeButton(image: UIImage?) -> UIButton {
+    private func makeButton(image: UIImage?, title: String) -> UIButton {
         let inactiveColor = theme.icon.inactiveBackgroundColor.color
         let activeColor = theme.icon.activeBackgroundColor.color
         let darkerActiveColor = theme.stars.activeBackgroundColor.color.darker(by: 5) ?? activeColor
@@ -73,9 +73,9 @@ class SmileysComponent: UIView, Component {
 
         button.addTarget(self, action: #selector(onSelection(sender:)), for: .touchUpInside)
 
-        button.width(constant: 55)
-        button.height(constant: 55)
+        button.width(constant: 110)
 
+        button.setTitle(title, for: .normal)
         return button
     }
 
@@ -89,14 +89,14 @@ class SmileysComponent: UIView, Component {
 
         for button in buttons {
             button.isSelected = false
+            button.setTitle(nil, for: .normal)
         }
 
         buttonSelected.isSelected = true
 
         if let index = buttons.firstIndex(of: buttonSelected) {
-            // Adding 1 because smileys will always be value of 1 to 5
-            let value = index + 1
-            onSelection(value)
+            // Add 1 because PMF smileys will always be value of 1 to 3
+            onSelection(index + 1)
         } else {
             Logger.log(.fatal, "Error getting value from selected smiley")
         }

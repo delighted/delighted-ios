@@ -1,13 +1,17 @@
 import UIKit
 
 class StarsComponent: UIView, Component {
-    let theme: Theme
+    let configuration: SurveyConfiguration
+
+    var theme: Theme {
+        return configuration.theme
+    }
 
     typealias OnSelection = (Int) -> Void
     let onSelection: OnSelection
 
-    init(theme: Theme, onSelection: @escaping OnSelection) {
-        self.theme = theme
+    init(configuration: SurveyConfiguration, onSelection: @escaping OnSelection) {
+        self.configuration = configuration
         self.onSelection = onSelection
         super.init(frame: CGRect.zero)
         setupView()
@@ -50,7 +54,7 @@ class StarsComponent: UIView, Component {
         let activeColor = theme.stars.activeBackgroundColor.color
         let darkerActiveColor = theme.stars.activeBackgroundColor.color.darker(by: 5) ?? activeColor
 
-        let button = TintStateButton()
+        let button = TintStateButton(configuration: configuration)
         let selectedImage = Images.star.image
 
         switch theme.buttonStyle {
