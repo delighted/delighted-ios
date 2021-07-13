@@ -213,7 +213,8 @@ public class SurveyViewController: UIViewController, DelightedPageViewController
         let button = Button(configuration: configuration, mode: .primary)
         button.translatesAutoresizingMaskIntoConstraints = false
 
-        button.setTitle(self.configuration.submitText, for: .normal)
+        let buttonTitle = self.survey.template.additionalQuestions.isEmpty ? self.configuration.submitText : self.configuration.nextText
+        button.setTitle(buttonTitle, for: .normal)
         button.addTarget(self, action: #selector(onSubmit(sender:)), for: .touchUpInside)
 
         button.alpha = 0
