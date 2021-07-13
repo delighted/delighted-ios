@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |spec|
   spec.name                  = "Delighted"
-  spec.version               = "1.1.0"
+  spec.version               = "1.2.0"
   spec.summary               = "Delighted uses the Net Promoter System® to gather real feedback from your customers"
   spec.description           = <<~DESC
     Delighted uses the Net Promoter System® to gather real feedback from your customers
