@@ -48,6 +48,10 @@ class ExamplesViewController: UITableViewController {
                 delightedID: "mobile-sdk-KOXlnq0hBwViN9Nu"
             ),
             Example(
+                label: "PMF",
+                delightedID: "mobile-sdk-Tk5WTarzkYd5uCTG"
+            ),
+            Example(
                 label: "Smileys",
                 delightedID: "mobile-sdk-WFdiU1PF6b3AuMB4"
             ),

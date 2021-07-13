@@ -14,6 +14,7 @@ enum Images: String {
     case smileyNeutral = "smilies_neutral"
     case smileyHappy = "smilies_happy"
     case smileyVeryHappy = "smilies_very_happy"
+    case smileyVeryDisappointed = "smilies_very_disappointed"
 
     case thumbsUp = "thumbs_up"
     case thumbsDown = "thumbs_down"

@@ -1,13 +1,17 @@
 import UIKit
 
 class ThumbsComponent: UIView, Component {
-    let theme: Theme
+    let configuration: SurveyConfiguration
+
+    var theme: Theme {
+        return configuration.theme
+    }
 
     typealias OnSelection = (Int) -> Void
     let onSelection: OnSelection
 
-    init(theme: Theme, onSelection: @escaping OnSelection) {
-        self.theme = theme
+    init(configuration: SurveyConfiguration, onSelection: @escaping OnSelection) {
+        self.configuration = configuration
         self.onSelection = onSelection
         super.init(frame: CGRect.zero)
         setupView()
@@ -52,7 +56,7 @@ class ThumbsComponent: UIView, Component {
         let activeColor = theme.icon.activeBackgroundColor.color
         let darkerActiveColor = theme.stars.activeBackgroundColor.color.darker(by: 5) ?? activeColor
 
-        let button = TintStateButton()
+        let button = TintStateButton(configuration: configuration)
         button.setImage(image, for: .normal)
         button.setImage(image, for: .highlighted)
         button.setImage(image, for: .selected)

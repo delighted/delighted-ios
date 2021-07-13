@@ -1,6 +1,13 @@
 import UIKit
 
 class TintStateButton: UIButton {
+    let labelPaddingTop: CGFloat = 8.0
+    let configuration: SurveyConfiguration
+
+    var theme: Theme {
+        return configuration.theme
+    }
+
     var normalTintColor: UIColor? = nil {
             didSet {
                 updateTint()
@@ -22,8 +29,11 @@ class TintStateButton: UIButton {
            }
        }
 
-    init() {
+    init(configuration: SurveyConfiguration) {
+        self.configuration = configuration
         super.init(frame: .zero)
+
+        apply()
     }
 
     required init?(coder: NSCoder) {
@@ -44,6 +54,28 @@ class TintStateButton: UIButton {
         }
     }
 
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        if let title = currentTitle {
+            // Resize the content area to be large enough for the label, place
+            // the label beneath the image, and center-align the content.
+            let buttonWidth = frame.size.width
+            let imageHeight = currentImage!.size.height
+            let imageWidth = currentImage!.size.width
+
+            titleLabel!.numberOfLines = 0
+            let labelHeight = textHeight(text: title, withWidth: buttonWidth, font: titleLabel!.font)
+
+            contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: labelHeight + labelPaddingTop, right: 0)
+            imageEdgeInsets = UIEdgeInsets(top: 0, left: (bounds.width - imageWidth) / 2, bottom: 0, right: 0)
+            titleEdgeInsets = UIEdgeInsets(top: imageHeight + labelHeight + labelPaddingTop, left: -imageWidth, bottom: -labelPaddingTop, right: 0)
+        } else {
+            contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+            imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        }
+    }
+
     private func updateTint() {
         switch (isSelected, isHighlighted) {
         case (false, false):
@@ -55,6 +87,23 @@ class TintStateButton: UIButton {
         case (true, true):
             tintColor = selectedHighlightedTintColor
         }
+    }
+
+    private func apply() {
+        layer.masksToBounds = true
+        titleLabel?.textAlignment = .center
+        titleLabel?.font = configuration.font(ofSize: 14)
+
+        setTitleColor(theme.primaryTextColor.color, for: .normal)
+        setTitleColor(theme.primaryTextColor.color, for: [.normal, .highlighted])
+        setTitleColor(theme.primaryTextColor.color, for: .selected)
+        setTitleColor(theme.primaryTextColor.color, for: [.selected, .highlighted])
+    }
+
+    private func textHeight(text: String, withWidth width: CGFloat, font: UIFont) -> CGFloat {
+        let maxSize = CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)
+        let actualSize = text.boundingRect(with: maxSize, options: [.usesLineFragmentOrigin], attributes: [.font: font], context: nil)
+        return actualSize.height
     }
 }
 
