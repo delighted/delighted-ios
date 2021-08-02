@@ -58,7 +58,7 @@ class PMFComponent: UIView, Component {
         let activeColor = theme.icon.activeBackgroundColor.color
         let darkerActiveColor = theme.stars.activeBackgroundColor.color.darker(by: 5) ?? activeColor
 
-        let button = TintStateButton(configuration: configuration)
+        let button = TintStateButton(surveyConfiguration: configuration)
         button.setImage(image, for: .normal)
         button.setImage(image, for: .highlighted)
         button.setImage(image, for: .selected)

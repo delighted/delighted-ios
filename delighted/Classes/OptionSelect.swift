@@ -98,7 +98,7 @@ class OptionSelect: UIView {
     }
 
     private func makeButton(title: String) -> Button {
-        let button = Button(configuration: configuration, mode: .button)
+        let button = Button(surveyConfiguration: configuration, mode: .button)
         button.translatesAutoresizingMaskIntoConstraints = false
 
         button.setTitle(title, for: .normal)

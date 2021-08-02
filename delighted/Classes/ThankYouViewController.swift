@@ -80,7 +80,7 @@ public class ThankYouViewController: UIViewController, DelightedPageViewControll
     }()
 
     private lazy var linkButton: Button = {
-        let button = Button(configuration: configuration, mode: .primary)
+        let button = Button(surveyConfiguration: configuration, mode: .primary)
         button.contentEdgeInsets = UIEdgeInsets(top: 8, left: 24, bottom: 8, right: 24)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(onLinkClick(sender:)), for: .touchUpInside)
