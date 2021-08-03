@@ -29,7 +29,7 @@ public struct Survey: Decodable {
         }
 
         public enum ID: String, Decodable {
-            case csat, ces, smileys, starsFive = "stars_five", thumbs, nps, enps, pmf
+            case csat, csat3, ces, ces7, smileys, starsFive = "stars_five", thumbs, nps, enps, pmf
         }
 
         public struct Group {
