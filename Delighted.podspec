@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
   spec.homepage              = "https://github.com/delighted/delighted-ios"
   spec.author                = { "Delighted": "hello@delighted.com" }
   spec.license               = { file: "LICENSE" }
-  spec.ios.deployment_target = "11.0"
+  spec.ios.deployment_target = "12.1"
   spec.source                = { git: "https://github.com/delighted/delighted-ios.git", tag: "#{spec.version}" }
   spec.module_name           = "Delighted"
   spec.swift_version         = "5.0"

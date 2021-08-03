@@ -1,7 +1,7 @@
 platform :ios do
   desc "Run tests on the example project"
   lane :test do
-    scan(workspace: "./Example/delighted.xcworkspace", device: "iPhone 6")
+    scan(workspace: "./Example/delighted.xcworkspace", device: "iPhone 8")
   end
 
   desc "Bumps delighted.podspec and Version.swift"
