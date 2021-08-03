@@ -543,7 +543,7 @@
 				INFOPLIST_FILE = delighted/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.2.1;
+				MARKETING_VERSION = 1.3.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.delighted.delighted-ios-sdk-demo";
 				PRODUCT_NAME = delighted_Example;
@@ -565,7 +565,7 @@
 				INFOPLIST_FILE = delighted/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.2.1;
+				MARKETING_VERSION = 1.3.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.delighted.delighted-ios-sdk-demo";
 				PRODUCT_NAME = delighted_Example;
