@@ -152,7 +152,7 @@ public class AdditionalQuestionViewController: UIViewController, DelightedPageVi
     }()
 
     private lazy var nextButton: UIButton = {
-        let button = Button(configuration: configuration, mode: .primary)
+        let button = Button(surveyConfiguration: configuration, mode: .primary)
         button.translatesAutoresizingMaskIntoConstraints = false
 
         button.setTitle(configuration.nextText, for: .normal)
@@ -169,7 +169,7 @@ public class AdditionalQuestionViewController: UIViewController, DelightedPageVi
     }()
 
     private lazy var previousButton: UIButton = {
-        let button = Button(configuration: configuration, mode: .secondary)
+        let button = Button(surveyConfiguration: configuration, mode: .secondary)
         button.translatesAutoresizingMaskIntoConstraints = false
 
         button.setTitle(configuration.prevText, for: .normal)

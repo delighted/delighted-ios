@@ -38,7 +38,7 @@ class CSATComponent: UIView, Component {
         var buttons = [Button]()
 
         for i in minNumber...maxNumber {
-            let button = Button(configuration: configuration, mode: .scale)
+            let button = Button(surveyConfiguration: configuration, mode: .scale)
             button.setTitle("\(i)", for: .normal)
             button.titleLabel?.font = configuration.font(ofSize: 16)
             button.isSelected = true

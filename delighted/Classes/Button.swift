@@ -2,10 +2,10 @@ import UIKit
 
 class TintStateButton: UIButton {
     let labelPaddingTop: CGFloat = 8.0
-    let configuration: SurveyConfiguration
+    let surveyConfiguration: SurveyConfiguration
 
     var theme: Theme {
-        return configuration.theme
+        return surveyConfiguration.theme
     }
 
     var normalTintColor: UIColor? = nil {
@@ -29,8 +29,8 @@ class TintStateButton: UIButton {
            }
        }
 
-    init(configuration: SurveyConfiguration) {
-        self.configuration = configuration
+    init(surveyConfiguration: SurveyConfiguration) {
+        self.surveyConfiguration = surveyConfiguration
         super.init(frame: .zero)
 
         apply()
@@ -92,7 +92,7 @@ class TintStateButton: UIButton {
     private func apply() {
         layer.masksToBounds = true
         titleLabel?.textAlignment = .center
-        titleLabel?.font = configuration.font(ofSize: 14)
+        titleLabel?.font = surveyConfiguration.font(ofSize: 14)
 
         setTitleColor(theme.primaryTextColor.color, for: .normal)
         setTitleColor(theme.primaryTextColor.color, for: [.normal, .highlighted])
@@ -120,8 +120,8 @@ class Button: UIButton {
         case primary, secondary, scale, button
     }
 
-    init(configuration: SurveyConfiguration, mode: Mode) {
-        self.surveyConfiguration = configuration
+    init(surveyConfiguration: SurveyConfiguration, mode: Mode) {
+        self.surveyConfiguration = surveyConfiguration
         self.mode = mode
         super.init(frame: .zero)
 

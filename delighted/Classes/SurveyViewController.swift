@@ -210,7 +210,7 @@ public class SurveyViewController: UIViewController, DelightedPageViewController
     }()
 
     private lazy var submitButton: Button = {
-        let button = Button(configuration: configuration, mode: .primary)
+        let button = Button(surveyConfiguration: configuration, mode: .primary)
         button.translatesAutoresizingMaskIntoConstraints = false
 
         let buttonTitle = self.survey.template.additionalQuestions.isEmpty ? self.configuration.submitText : self.configuration.nextText

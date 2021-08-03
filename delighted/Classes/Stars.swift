@@ -54,7 +54,7 @@ class StarsComponent: UIView, Component {
         let activeColor = theme.stars.activeBackgroundColor.color
         let darkerActiveColor = theme.stars.activeBackgroundColor.color.darker(by: 5) ?? activeColor
 
-        let button = TintStateButton(configuration: configuration)
+        let button = TintStateButton(surveyConfiguration: configuration)
         let selectedImage = Images.star.image
 
         switch theme.buttonStyle {
