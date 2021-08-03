@@ -831,6 +831,161 @@ final class DelightedTests: XCTestCase {
         }
     }
 
+    func testCSAT3() {
+        let data = loadJSONData(filename: "sample_csat3")!
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+
+        do {
+            let surveyRequest = try decoder.decode(SurveyRequest.self, from: data)
+
+            // Token
+            XCTAssertNotNil(surveyRequest)
+            XCTAssertNotNil(surveyRequest.token)
+            XCTAssertEqual(surveyRequest.token, "test-261775")
+
+            // Survey type
+            XCTAssertEqual(surveyRequest.survey.type.groups.count, 3)
+            XCTAssertEqual(surveyRequest.survey.type.id, .csat3)
+
+            let satisfied = surveyRequest.survey.type.groups.first { (group) -> Bool in
+                return group.name == "satisfied"
+            }
+            let neutral = surveyRequest.survey.type.groups.first { (group) -> Bool in
+                return group.name == "neutral"
+            }
+            let dissatisfied = surveyRequest.survey.type.groups.first { (group) -> Bool in
+                return group.name == "dissatisfied"
+            }
+
+            XCTAssertEqual(satisfied!.name, "satisfied")
+            XCTAssertEqual(satisfied!.scoreMin, 3)
+            XCTAssertEqual(satisfied!.scoreMax, 3)
+
+            XCTAssertEqual(neutral!.name, "neutral")
+            XCTAssertEqual(neutral!.scoreMin, 2)
+            XCTAssertEqual(neutral!.scoreMax, 2)
+
+            XCTAssertEqual(dissatisfied!.name, "dissatisfied")
+            XCTAssertEqual(dissatisfied!.scoreMin, 1)
+            XCTAssertEqual(dissatisfied!.scoreMax, 1)
+
+            // Survey configuration
+            let configuration = surveyRequest.survey.configuration
+            XCTAssertEqual(configuration.textBaseDirection, .ltr)
+            XCTAssertEqual(configuration.poweredByLinkText, "Powered by Delighted")
+            XCTAssertEqual(configuration.poweredByLinkURL, "https://delighted.com/?utm_campaign=mobile_sdk_powered1&utm_content=badge&utm_medium=web&utm_source=delighted_mobile_sdk")
+            XCTAssertEqual(configuration.nextText, "Next")
+            XCTAssertEqual(configuration.prevText, "Previous")
+            XCTAssertEqual(configuration.selectOneText, "Select one option")
+            XCTAssertEqual(configuration.selectManyText, "Select one or more options")
+            XCTAssertEqual(configuration.submitText, "Submit")
+            XCTAssertEqual(configuration.doneText, "Done")
+            XCTAssertEqual(configuration.notLikelyText, "Dissatisfied")
+            XCTAssertEqual(configuration.veryLikelyText, "Satisfied")
+
+            // Survey template
+            let template = surveyRequest.survey.template
+            XCTAssertEqual(template.questionText, "How satisfied were you with Hem & Stitch?")
+
+            let commentPrompts = surveyRequest.survey.template.commentPrompts
+            XCTAssertEqual(commentPrompts.count, 3)
+
+            let scoreText = surveyRequest.survey.template.scoreText
+            XCTAssertEqual(scoreText!.count, 3)
+            XCTAssertEqual(scoreText!["1"], "Dissatisfied")
+            XCTAssertEqual(scoreText!["2"], "Neither satisfied nor dissatisfied")
+            XCTAssertEqual(scoreText!["3"], "Satisfied")
+
+            let additionalQuestions = template.additionalQuestions
+            XCTAssertEqual(additionalQuestions.count, 0)
+
+            // Thank you
+            let thankYou = surveyRequest.thankYou
+            XCTAssertEqual(thankYou.text, "Thanks, we really appreciate your feedback.")
+
+            XCTAssertEqual(surveyRequest.thankYou.groups.count, 0)
+        } catch {
+            print(error.localizedDescription)
+            XCTFail("Failed to create surveyRequest")
+        }
+    }
+
+    func testCES7() {
+        let data = loadJSONData(filename: "sample_ces7")!
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+
+        do {
+            let surveyRequest = try decoder.decode(SurveyRequest.self, from: data)
+
+            // Token
+            XCTAssertNotNil(surveyRequest)
+            XCTAssertNotNil(surveyRequest.token)
+            XCTAssertEqual(surveyRequest.token, "test-261777")
+
+            // Survey type
+            XCTAssertEqual(surveyRequest.survey.type.groups.count, 3)
+            XCTAssertEqual(surveyRequest.survey.type.id, .ces7)
+            let agree = surveyRequest.survey.type.groups.first { (group) -> Bool in
+                return group.name == "agree"
+            }
+            let neutral = surveyRequest.survey.type.groups.first { (group) -> Bool in
+                return group.name == "neutral"
+            }
+            let disagree = surveyRequest.survey.type.groups.first { (group) -> Bool in
+                return group.name == "disagree"
+            }
+
+            XCTAssertEqual(agree!.name, "agree")
+            XCTAssertEqual(agree!.scoreMin, 5)
+            XCTAssertEqual(agree!.scoreMax, 7)
+
+            XCTAssertEqual(neutral!.name, "neutral")
+            XCTAssertEqual(neutral!.scoreMin, 4)
+            XCTAssertEqual(neutral!.scoreMax, 4)
+
+            XCTAssertEqual(disagree!.name, "disagree")
+            XCTAssertEqual(disagree!.scoreMin, 1)
+            XCTAssertEqual(disagree!.scoreMax, 3)
+
+            // Survey configuration
+            let configuration = surveyRequest.survey.configuration
+            XCTAssertEqual(configuration.textBaseDirection, .ltr)
+            XCTAssertEqual(configuration.poweredByLinkText, "Powered by Delighted")
+            XCTAssertEqual(configuration.poweredByLinkURL, "https://delighted.com/?utm_campaign=mobile_sdk_powered1&utm_content=badge&utm_medium=web&utm_source=delighted_mobile_sdk")
+            XCTAssertEqual(configuration.nextText, "Next")
+            XCTAssertEqual(configuration.prevText, "Previous")
+            XCTAssertEqual(configuration.selectOneText, "Select one option")
+            XCTAssertEqual(configuration.selectManyText, "Select one or more options")
+            XCTAssertEqual(configuration.submitText, "Submit")
+            XCTAssertEqual(configuration.doneText, "Done")
+            XCTAssertEqual(configuration.notLikelyText, "Strongly disagree")
+            XCTAssertEqual(configuration.veryLikelyText, "Strongly agree")
+
+            // Survey template
+            let template = surveyRequest.survey.template
+            XCTAssertEqual(template.questionText, "Hem & Stitch made it easy for me to handle my issue.")
+
+            let commentPrompts = surveyRequest.survey.template.commentPrompts
+            XCTAssertEqual(commentPrompts.count, 7)
+
+            let additionalQuestions = template.additionalQuestions
+            XCTAssertEqual(additionalQuestions.count, 0)
+
+            // Thank you
+            let thankYou = surveyRequest.thankYou
+            XCTAssertEqual(thankYou.text, "Thanks, we really appreciate your feedback.")
+
+            XCTAssertEqual(surveyRequest.thankYou.groups.count, 0)
+
+        } catch {
+            print(error.localizedDescription)
+            XCTFail("Failed to create surveyRequest")
+        }
+    }
+
+
     static var allTests = [
         ("testNPS", testNPS),
         ("testFiveStar", testFiveStar),
@@ -839,6 +994,8 @@ final class DelightedTests: XCTestCase {
         ("testSmileys", testSmileys),
         ("testThumbs", testThumbs),
         ("testENPS", testENPS),
-        ("testPMF", testPMF)
+        ("testPMF", testPMF),
+        ("testCSAT3", testCSAT3),
+        ("testCES7", testCES7)
     ]
 }

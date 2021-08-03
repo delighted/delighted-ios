@@ -134,6 +134,15 @@ public class SurveyViewController: UIViewController, DelightedPageViewController
                 maxNumber: 5,
                 onSelection: self.onSelection
             )
+        case .ces7:
+            component = CESComponent(
+                configuration: configuration,
+                minLabel: configuration.notLikelyText,
+                maxLabel: configuration.veryLikelyText,
+                minNumber: 1,
+                maxNumber: 7,
+                onSelection: self.onSelection
+            )
         case .csat:
             component = CSATComponent(
                 configuration: configuration,
@@ -143,6 +152,8 @@ public class SurveyViewController: UIViewController, DelightedPageViewController
                 maxNumber: 5,
                 onSelection: self.onSelection
             )
+        case .csat3:
+            component = CSAT3Component(configuration: configuration, template: survey.template, onSelection: self.onSelection)
         case .smileys:
             component = SmileysComponent(configuration: configuration, onSelection: self.onSelection)
         case .starsFive:

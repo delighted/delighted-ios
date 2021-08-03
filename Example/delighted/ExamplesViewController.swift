@@ -10,12 +10,14 @@ struct Example {
 }
 
 enum Section: Int {
-    case surveyTypes = 0, other
+    case surveyTypes = 0, additionalScales, other
 
     var title: String {
         switch self {
         case .surveyTypes:
             return "Survey Types"
+        case .additionalScales:
+            return "Additional Scales"
         case .other:
             return "Other"
         }
@@ -41,7 +43,7 @@ class ExamplesViewController: UITableViewController {
             ),
             Example(
                 label: "CES",
-                delightedID: "mobile-sdk-lLP3R1ZrvjLVTBEL"
+                delightedID: "mobile-sdk-knM3lJ5zGBEraZG8"
             ),
             Example(
                 label: "5-star",
@@ -62,6 +64,16 @@ class ExamplesViewController: UITableViewController {
             Example(
                 label: "eNPS",
                 delightedID: "mobile-sdk-cJmG8vTg0CDPazwF"
+            )
+        ],
+        .additionalScales: [
+            Example(
+                label: "CSAT (3-point scale)",
+                delightedID: "mobile-sdk-LCTlXgXo7XAoIKog"
+            ),
+            Example(
+                label: "CES (5-point scale)",
+                delightedID: "mobile-sdk-lLP3R1ZrvjLVTBEL"
             )
         ],
         .other: [
