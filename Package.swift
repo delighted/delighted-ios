@@ -15,7 +15,7 @@ let package = Package(
         )
     ],
     dependencies: [
-      .package(url: "https://github.com/daltoniam/Starscream.git", from: "4.0.4")
+      .package(url: "https://github.com/daltoniam/Starscream.git", .upToNextMajor(from: "4.0.0"))
     ],
     targets: [
         .target(
