@@ -15,7 +15,6 @@ Pod::Spec.new do |spec|
   spec.module_name           = "Delighted"
   spec.swift_version         = "5.0"
   spec.ios.source_files      = "delighted/Classes/*.swift"
-  spec.resources             = "delighted/Assets/*.xcassets"
-
+  spec.resource_bundles      = { "Delighted_Delighted" => ["delighted/Assets/*.xcassets"] }
   spec.dependency "Starscream", "~> 4.0" # Support for Swift 5
 end

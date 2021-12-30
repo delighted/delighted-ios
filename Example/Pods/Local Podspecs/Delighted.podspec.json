@@ -22,7 +22,11 @@
   "ios": {
     "source_files": "delighted/Classes/*.swift"
   },
-  "resources": "delighted/Assets/*.xcassets",
+  "resource_bundles": {
+    "Delighted_Delighted": [
+      "delighted/Assets/*.xcassets"
+    ]
+  },
   "dependencies": {
     "Starscream": [
       "~> 4.0"
