@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 internal struct ClientEligibility {
     typealias EligibilityCheckPassed = () -> Void
