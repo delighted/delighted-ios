@@ -1,0 +1,6 @@
+framework module Delighted {
+  umbrella header "Delighted-umbrella.h"
+
+  export *
+  module * { export * }
+}
