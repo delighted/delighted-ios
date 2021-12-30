@@ -8,77 +8,77 @@
 
 /* Begin PBXBuildFile section */
 		0A4BABC086285216FFC784001AF4ABBB /* WSCompression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918C09D193EF7F62A7C2611F12AC44B /* WSCompression.swift */; };
-		0B706A9DB9140BBD6D9A2BC2D86E3F3C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12793922154015A99457687235F7A11A /* Person.swift */; };
-		0BDA17E42811D0B92AF6C3F36D950F8B /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9210367A799B89919A4EE240CFE6B580 /* Version.swift */; };
-		112B271652162678FB9ABB37656B02DE /* AdditionalQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC1790EB173C703715816E08F8BA7C /* AdditionalQuestionViewController.swift */; };
-		13338D1518975D266436EE6ED1FD018B /* DelightedPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6461018E10C74B24967F540043E6DF5 /* DelightedPageViewController.swift */; };
+		0ACB450A3F5C9090D6D7F77D8A1322A0 /* ThankYou.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79A6A34EF896148000FF164649EE279 /* ThankYou.swift */; };
+		0E285FD8B67C9C79857144F57F0DBD72 /* AdditionalQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2265D0BE76A6EFF977D72774BB5881BB /* AdditionalQuestionViewController.swift */; };
 		13EFBE771C4B0D2865FE5F649577EC87 /* Pods-delighted_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 970E69D1238BE9393BE1503C7CAA8F40 /* Pods-delighted_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		145DC06AC48938E673DB11317EEB6FA6 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E4549C56A665FACF96CCC2440EE2C /* Colors.swift */; };
 		1B0ED68E039A78FF850DC39E21BF4711 /* StringHTTPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D70531198624C7D8B14FF91C62FF6B /* StringHTTPHandler.swift */; };
 		1C8DD26CCE3955DC741B5C577DF4558C /* Transport.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C8BC22AA74FEDA9CF44852D28F68A4 /* Transport.swift */; };
-		21154C9EC36E4D957DBD954845EFAF5B /* NPS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713FE2BF3A08459D2D35ACAE46D34800 /* NPS.swift */; };
-		23D6013D34AA7D8B146679BC9CBE9040 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C649A0C9DCD93C5C8D29B5BF8BC5B5 /* API.swift */; };
-		2C0AF40F41BB01D6B943D2BFCEAA5AEE /* EligibilityConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F07830617D756615ED715A662486F8 /* EligibilityConfiguration.swift */; };
-		2D5005941493819867F5398B9574ED0D /* ThankYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8965288ED882E6E7185104FB2CF4FAFC /* ThankYouViewController.swift */; };
-		2DFD1CCEB2674E37C4C0FD0846CC1AC0 /* SurveyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1278AEEF8A3718D92B2A0575682394FA /* SurveyResponse.swift */; };
+		1E2A5F63171FF16550B05DFDDCB8C000 /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FFBFA6C17A6796AA048C3C5CF8F892 /* TextArea.swift */; };
+		308170A34A3C1E5C37038F59577DA94F /* ClientEligibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1958B81C50A345298D47C24215444BA /* ClientEligibility.swift */; };
+		30BA06D6C4E81146D381C21307A059C3 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C883E02B51D1464AE3E4ECECF0E8D3 /* Button.swift */; };
 		30C2537DC8FD9FC2F8190B0ED6619824 /* TCPTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CCA8582A00BBFBC2E9AFFC1C1D53A9 /* TCPTransport.swift */; };
-		321D6E1548F136A8E7838A66EDF42675 /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772BF410D154D626F53606CCE70215CF /* Properties.swift */; };
-		325C9461A8DFD0E5E31927BE04A022EB /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7DBEE7887FE4F2D4614FC9AAC5575D /* Images.swift */; };
+		320099B542B2A48BB8F66A20EB7B93C6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEA10DB02B970C13E0B9B93F125229A /* API.swift */; };
 		3366309EAEEE2758ACB380E3C7C72AED /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3319CBE6BF16B5B2366BDE834B663B5E /* Starscream.framework */; };
-		377F60D5C1A5033333F78DA6359291F1 /* CSAT3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292950FDBF98D228C887AE7FE3B019DD /* CSAT3.swift */; };
-		3AACCCC8CA8175E189A2F0547C2E50CA /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9DA43E949E970A40B6CAB7B193C9E1 /* Component.swift */; };
+		36574177050AED36E899603733A4E5C5 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BAE53627958A7A80B2A623938D3869 /* Theme.swift */; };
+		3871187ECD202F28C7D140F0FEE31565 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F1DC91A18101381D7B73CF73FCE431 /* CloseButton.swift */; };
+		3ACF30E4D9C3B6242FDA307DA1C6BA59 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BACE03DB20B374BB7CFAE0A8721695E /* Component.swift */; };
 		3CA808FB43FBC3E55E83B8D8844E4AC8 /* Starscream-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B65F09370A4D9877255EC1C47060A2 /* Starscream-dummy.m */; };
-		40BCCD23A6BAF21F962716D3BCB48C7F /* Smileys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709AEAF50D6CAD6A8981EA7CA6295269 /* Smileys.swift */; };
-		417016E5C8127BF0D346F5BDD22F1B3C /* PMF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73219D80D352F19003455397FC45C2FA /* PMF.swift */; };
+		3DA265E35459456AE5603FC7266B80FB /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324E9A9AD3FFF16DFB4DC5E6D036C318 /* SurveyViewController.swift */; };
+		3FB38EDD1DB315A857D44DF0945AC2D8 /* Pusher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A22BB053BD7DCFA7081E5AB904341C /* Pusher.swift */; };
 		442D41E051D049D98A5B033AAD9E0A2A /* Pods-delighted_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 48518693EC64586036D796C68BC0D929 /* Pods-delighted_Example-dummy.m */; };
-		449F45F7C153D27E710847DC82BABAF2 /* CES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAD8A0A339221507FA301670D8A3FA /* CES.swift */; };
-		461221D76E8F9F801F92DB169ECE84D6 /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B37DE0F1226EC093EDE8DAFF4125B /* TextArea.swift */; };
 		48996900CA1256E2395BCF59117A4948 /* FrameCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C291A02C054326B5C6022EACD814E4 /* FrameCollector.swift */; };
 		49E6AF32A851B20CB7AFA0FF6CA9B188 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2727BA14E02E7210DD6B547EA7D394 /* WebSocket.swift */; };
-		4A2E412348768725B48B30108A967491 /* Delighted-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 344868E9599A3DF0D25BED9F5799087D /* Delighted-dummy.m */; };
+		4A2E412348768725B48B30108A967491 /* Delighted-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 40363960A3CD0E48E173C51CE2159916 /* Delighted-dummy.m */; };
+		4AF936E0F0E93CFBEB5E7B4F2FA4FC5A /* PMF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67BF0D15F8C73CE5D7B29431270B9835 /* PMF.swift */; };
 		4B69F118806ABBA577198DB2DB3ED2E3 /* Framer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1454E39E11FD28A611495E03B2015FD4 /* Framer.swift */; };
 		4C6DBC5A7AD65BF757D72304D27AB2A7 /* WebSocketServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62AC07A9271D8996F97CC35856BA647 /* WebSocketServer.swift */; };
+		4DD7AA0FC0BF9888B45DB17C6C9A17BC /* Stars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E31F9B3C80AABAB6AC639440462C5 /* Stars.swift */; };
 		4EF2AFC63B1BAED19997A43CAADA24F0 /* Starscream-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ECFB158E08A6502A38761C96CB68975B /* Starscream-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5AF5F17C3E0326EC0AC8532BC9A9B9FF /* Pusher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98B2273EE2BF3431B6AA0BD4AB07676 /* Pusher.swift */; };
-		69FB5AB7C18231DD83ED5950084B3133 /* Haptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3E3181946E90E97565FA471A6E5B6C /* Haptic.swift */; };
-		6DD074C70DC5E7942DCB4C5F8C17CC3E /* OptionSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE549D6286A3446F727A2CDB3AA0D6E /* OptionSelect.swift */; };
+		5F5DDAAC8B7036AF53C07871E7E3576E /* NPS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3207643A4EFCA34F0E83C02D059D88B1 /* NPS.swift */; };
+		6089E070F8C1C4DD0C0E5C1EDC2829EC /* EligibilityConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1C1B004127D9E52245A16150A4B6AD /* EligibilityConfiguration.swift */; };
+		6A52DA764DC4054977A8F9573047589B /* CSAT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3547BFBA6C2FBDB078EF4D0C20A6E11B /* CSAT.swift */; };
+		7322F36730EDD79F035675B76F7F2243 /* SurveySession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FEDFB68571CA550A5542395DDE1956 /* SurveySession.swift */; };
+		7332DBCEE73C682970602D36D36FEDFA /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81F92E59A4B9112A535A411D7029279 /* Person.swift */; };
+		7402F2C8319BED5B6900EDEE27196A08 /* Delighted.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2E05EE27695C97786FD129E4284EA5 /* Delighted.swift */; };
 		7543192C56E834F665E7E113F70C3306 /* Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EAFCD04DEECC2AC6B8727048A80617 /* Compression.swift */; };
-		76D139E4079466A97ACEC81CB789A87B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71B6D13EACC7D2E1ACAFE420B59E81E6 /* Assets.xcassets */; };
-		77C8544DFC80EA29BBFF727A200C03BD /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF01F403B2EC2FC984B84DEE3EA7CFD /* Strings.swift */; };
+		787B48A86FEAD9B8A849E9B621129D3C /* PoweredBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A810B8B69B7692B9103B105F42E9FF4 /* PoweredBy.swift */; };
 		79AD71D53633E2A72ED8CD843FC74829 /* FoundationTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7E34251E9353A38AC748BB94EDC575 /* FoundationTransport.swift */; };
-		7DF6ED8E8746B8C9781AFA689D45374C /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881F24BA300786144E57F404B583E054 /* SurveyViewController.swift */; };
+		82F9F6B63B2B3CD92C5891D3548E65C3 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610DF92F83870F777AC7760C62C48C67 /* Strings.swift */; };
 		852D7096D9952F625310CF542DF58C21 /* HTTPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED0E33A6DD024AC0E71FEF3EA74D7C /* HTTPHandler.swift */; };
+		87FD6A8EA0B2CC2197D2C2F3FCD0C3EC /* Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D5AF0E92D5DCD42447610557BC8225 /* Scale.swift */; };
+		891F6DB4B5D34083A3EF01022CA5F2D5 /* DelightedPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89D2194BBFD935E8858BF36EED16C1 /* DelightedPageViewController.swift */; };
 		8C75915CB1EA63280DA024416B6706ED /* FoundationHTTPServerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F95157FC4CC8593A1B1E4607562122 /* FoundationHTTPServerHandler.swift */; };
-		8D90371237E256B70433C782D3FB3AB5 /* Stars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9837E90DED7D4F3D39FBA294F6993F /* Stars.swift */; };
 		911D06E85CAC41230C232B4B6BE34190 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DDB7D794281E95F8D2968EAAD0E8289 /* Foundation.framework */; };
-		94C4D02D1488CE99CC72FD3F1440A326 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7982EEDA3E858F598EDB6B4D8E1654 /* Theme.swift */; };
-		999F4B3FA0A685694DBAB561C05B3D9B /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CCC31253C7DDED8E9A77F1C4B46F04 /* CloseButton.swift */; };
+		93232A340B396160DBEBF61303A30978 /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9383C5CE5B8D39AAAF8D775DB33E9F75 /* Properties.swift */; };
 		9B029A8EB2990DA5A30E38A6E91B944D /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7175E21DED4337E7BBD3EF7424F315F6 /* Data+Extensions.swift */; };
 		9C9FE78B62C600CC8796FFE5564907D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DDB7D794281E95F8D2968EAAD0E8289 /* Foundation.framework */; };
+		A04C5960EE8DB02DEBC8F9F7579DAA04 /* Haptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2231D3E5EA22E5E825452508CBE924B8 /* Haptic.swift */; };
+		A06FDA818E25AA2E2CC79B80CD2FF741 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0DE83576C9C9F8108DD32513EFE938 /* Version.swift */; };
 		A2620294B99402DE79E759CF59D0B1F9 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0925310BE76B051E1B51E7FBB37F35 /* Engine.swift */; };
-		A9D74DFBC6D402159FEAC1A7310C7AC3 /* SurveyConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0B9A147DE8E60031F923BD72DE788F /* SurveyConfiguration.swift */; };
+		A3701C82DDF496D2A2A38BD1322ADDA6 /* ThankYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A827B382516616FB1707A462758CD8 /* ThankYouViewController.swift */; };
 		AD60702F9724D3EE57F6406894C0FCD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DDB7D794281E95F8D2968EAAD0E8289 /* Foundation.framework */; };
-		B3CD4C2EDB3D9AFAC150EEF6819CAD84 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EA73453F1945F65B59DE096A0452D4 /* Button.swift */; };
-		B59E12CE665854463E5C175E011E482D /* ViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B05DECB7B2E377873934360C1EC7169 /* ViewLayout.swift */; };
-		BAF2F5ABDB73D30269CEDCBB0F56BA93 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD39996BFF76E47EBCB05B4C77A20DD /* Survey.swift */; };
+		B64AD04B982D145C487C8A9AC000D055 /* ViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0ED4E3C3B8182DFF90F789E0252F8 /* ViewLayout.swift */; };
 		BC0D8F2380D085A856358128FEB2038A /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC292255BA6A323D7D1C01215CC6591 /* Security.swift */; };
+		BC31FA16617669F58B48883745A715E7 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E00CF131713EB2A5D555787B76DD074 /* Survey.swift */; };
 		BD953EEB6DA8E7A967C9D55BCF527CDD /* Pods-delighted_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEAE0164E2FE52527656AFDEE09CF22 /* Pods-delighted_Tests-dummy.m */; };
-		C1E0626659E661E3DFF59C815848D65A /* SurveySession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5A98C47BB74751A3505D793B27F1EC /* SurveySession.swift */; };
+		C0546C8DD0C58F4F5219346F8D4E7564 /* CSAT3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DE6C2CE591FCBB8B3FD67C31919ED1 /* CSAT3.swift */; };
+		C05633B54CC9424F8EF0CE4AB6242DA4 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BF7F33722985B05B466DA9A496537 /* Images.swift */; };
 		C1F309D5D71A460958FDCAE3F9DCF1C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DDB7D794281E95F8D2968EAAD0E8289 /* Foundation.framework */; };
-		CA341046734143DFBB677569D37B8771 /* Delighted-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 66D2190084C547703B124E9083B97462 /* Delighted-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA341046734143DFBB677569D37B8771 /* Delighted-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B982CB441D657A9808F97B566B135D0 /* Delighted-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBCDBA9F954AB413E632DA235BA596EB /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD212064ED1CC47B2560F6E20526B3B /* Server.swift */; };
 		D09D5DF950DC6C929012B2CD1EA426CC /* FoundationHTTPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF39A541BA78B8472A0F9D4E3504B90 /* FoundationHTTPHandler.swift */; };
-		D16D3C2F4B525ED22DEA34D55DF85DFD /* SurveyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B02E19D070E943C8BB7376AEFC8A61A /* SurveyRequest.swift */; };
-		DA1F0869404AB37606EA0D3D8346EE39 /* ClientEligibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EAB522F9A5E1EA73F50D2D457DB15B /* ClientEligibility.swift */; };
-		DE2FE44B27096E4E33BB786A5254AC51 /* Thumbs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B6C107DDCDF37F817A6FC2B2CC7B6B /* Thumbs.swift */; };
-		E1E29196738DC8F95B186D9150626F17 /* Delighted.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8D61B1BEFB2FA34E84BC551FB190D7 /* Delighted.swift */; };
-		E3A717628C066B0E146324D7878F5E86 /* ThankYou.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5784865E2FEA2A6F758FF49C823A2F /* ThankYou.swift */; };
+		D844FA5803A1FE263FFC47879CC142A1 /* SurveyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE564D55B5D9D54F15C14FE4DF2FD103 /* SurveyRequest.swift */; };
+		DEE38A6A36E3B48813E9B84F105FA122 /* SurveyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A5E9CC7BE8B97F4C398772AF89D4B /* SurveyResponse.swift */; };
+		E4A326BB8AB2B013504B9E4934FCD036 /* Smileys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46D852CFE65D327940C3FF1D20E2C21 /* Smileys.swift */; };
+		E8ED726D441D61CFCE3DD6D92161B596 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E2093F2739C102485A407F91B0A1DEB /* Assets.xcassets */; };
 		E9A5D7E95622EA0802A9DC177B6A1F3B /* Pods-delighted_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DEA0B1D4B496D6252915F87FB58B5C48 /* Pods-delighted_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EDFD5D8F98552C59D46BC0D570C17FA8 /* PoweredBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87C55ED3E6226D1A919D954FEC4A494 /* PoweredBy.swift */; };
 		EED9DEFA809330D2FEBFE25125B92A49 /* FoundationSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5831A57C2E79638C447411ED69EB6C42 /* FoundationSecurity.swift */; };
+		EF2584C53629EDF545B6879D9AE6C28B /* SurveyConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA3439F81BFAA43B8E0255729F2F30C /* SurveyConfiguration.swift */; };
 		EFFE6103FEBCE2B8EC80D8E1EF80BD72 /* WSEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED9AF7BDFE0F03CE129D72D85FCA460 /* WSEngine.swift */; };
-		F58C82B61E010DF983D864C489DF3DAE /* CSAT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC3B9E3CAFA65FF9A4FD43588A21CB7 /* CSAT.swift */; };
-		F8ECF3F987003C90CA2BF15DE855D1A2 /* Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867ED14D95EA1F4F2BBC88644DD02FB /* Scale.swift */; };
+		F08E4C48509EFF306831E50223697819 /* OptionSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9954EBE84FFC7BBAAB1BB58DF85A3 /* OptionSelect.swift */; };
+		F243349CE97B2FFA729A30CA72BF65B0 /* Thumbs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6022319110D7125F1F25784863E380D /* Thumbs.swift */; };
+		F50D804889D80D975271C995A03F9DCC /* CES.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC104338FAA1457B039D3B56432B036 /* CES.swift */; };
+		FB05854CAE8D841E974ABE8AB615AD91 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18775BB06A49C93B824560B646F2344A /* Colors.swift */; };
 		FD11CA9C8FD1AC6679521807B26D6A98 /* NativeEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ADCC3B462E7AE2D80872C7A66CA4A7 /* NativeEngine.swift */; };
 		FE53E4D853C4699BFE6319064B65CB62 /* Delighted_Delighted.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B9F5A8743503E9F24E5D358E04E6A814 /* Delighted_Delighted.bundle */; };
 /* End PBXBuildFile section */
@@ -123,108 +123,108 @@
 
 /* Begin PBXFileReference section */
 		010F5C43A348BC3C417C21FA354444E2 /* Starscream-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Starscream-prefix.pch"; sourceTree = "<group>"; };
-		09B6C107DDCDF37F817A6FC2B2CC7B6B /* Thumbs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Thumbs.swift; path = delighted/Classes/Thumbs.swift; sourceTree = "<group>"; };
-		09C649A0C9DCD93C5C8D29B5BF8BC5B5 /* API.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = API.swift; path = delighted/Classes/API.swift; sourceTree = "<group>"; };
-		0B05DECB7B2E377873934360C1EC7169 /* ViewLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewLayout.swift; path = delighted/Classes/ViewLayout.swift; sourceTree = "<group>"; };
-		0C0B9A147DE8E60031F923BD72DE788F /* SurveyConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SurveyConfiguration.swift; path = delighted/Classes/SurveyConfiguration.swift; sourceTree = "<group>"; };
-		10EA73453F1945F65B59DE096A0452D4 /* Button.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Button.swift; path = delighted/Classes/Button.swift; sourceTree = "<group>"; };
-		1278AEEF8A3718D92B2A0575682394FA /* SurveyResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SurveyResponse.swift; path = delighted/Classes/SurveyResponse.swift; sourceTree = "<group>"; };
-		12793922154015A99457687235F7A11A /* Person.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Person.swift; path = delighted/Classes/Person.swift; sourceTree = "<group>"; };
+		03FEDFB68571CA550A5542395DDE1956 /* SurveySession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SurveySession.swift; path = Sources/Delighted/Classes/SurveySession.swift; sourceTree = "<group>"; };
 		1454E39E11FD28A611495E03B2015FD4 /* Framer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Framer.swift; path = Sources/Framer/Framer.swift; sourceTree = "<group>"; };
+		1472CFD307E63C54F8925FA06E5AF2A5 /* Delighted.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Delighted.release.xcconfig; sourceTree = "<group>"; };
 		16D70531198624C7D8B14FF91C62FF6B /* StringHTTPHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringHTTPHandler.swift; path = Sources/Framer/StringHTTPHandler.swift; sourceTree = "<group>"; };
-		186B37DE0F1226EC093EDE8DAFF4125B /* TextArea.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextArea.swift; path = delighted/Classes/TextArea.swift; sourceTree = "<group>"; };
+		18775BB06A49C93B824560B646F2344A /* Colors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = Sources/Delighted/Classes/Colors.swift; sourceTree = "<group>"; };
 		1918C09D193EF7F62A7C2611F12AC44B /* WSCompression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WSCompression.swift; path = Sources/Compression/WSCompression.swift; sourceTree = "<group>"; };
-		1DDE1774C197F7FCFFB8EA8413518646 /* Delighted.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Delighted.debug.xcconfig; sourceTree = "<group>"; };
+		1BACE03DB20B374BB7CFAE0A8721695E /* Component.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Component.swift; path = Sources/Delighted/Classes/Component.swift; sourceTree = "<group>"; };
 		1E507858E7279D4C2470CEE01D8D1757 /* Pods-delighted_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-delighted_Example.release.xcconfig"; sourceTree = "<group>"; };
-		1E5A98C47BB74751A3505D793B27F1EC /* SurveySession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SurveySession.swift; path = delighted/Classes/SurveySession.swift; sourceTree = "<group>"; };
 		21B65F09370A4D9877255EC1C47060A2 /* Starscream-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Starscream-dummy.m"; sourceTree = "<group>"; };
-		292950FDBF98D228C887AE7FE3B019DD /* CSAT3.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CSAT3.swift; path = delighted/Classes/CSAT3.swift; sourceTree = "<group>"; };
+		2231D3E5EA22E5E825452508CBE924B8 /* Haptic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Haptic.swift; path = Sources/Delighted/Classes/Haptic.swift; sourceTree = "<group>"; };
+		2265D0BE76A6EFF977D72774BB5881BB /* AdditionalQuestionViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AdditionalQuestionViewController.swift; path = Sources/Delighted/Classes/AdditionalQuestionViewController.swift; sourceTree = "<group>"; };
+		2B982CB441D657A9808F97B566B135D0 /* Delighted-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Delighted-umbrella.h"; sourceTree = "<group>"; };
 		2C1CF04602B9D61F89BCC51DEA7939B0 /* Starscream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Starscream.debug.xcconfig; sourceTree = "<group>"; };
-		2F719D63A227773A7689E5DA43857B7F /* Delighted.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Delighted.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		30DE6C2CE591FCBB8B3FD67C31919ED1 /* CSAT3.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CSAT3.swift; path = Sources/Delighted/Classes/CSAT3.swift; sourceTree = "<group>"; };
+		3207643A4EFCA34F0E83C02D059D88B1 /* NPS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NPS.swift; path = Sources/Delighted/Classes/NPS.swift; sourceTree = "<group>"; };
+		324E9A9AD3FFF16DFB4DC5E6D036C318 /* SurveyViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SurveyViewController.swift; path = Sources/Delighted/Classes/SurveyViewController.swift; sourceTree = "<group>"; };
+		32F1DC91A18101381D7B73CF73FCE431 /* CloseButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CloseButton.swift; path = Sources/Delighted/Classes/CloseButton.swift; sourceTree = "<group>"; };
 		33086CD1DBFA36D5775795924E921ABB /* Delighted.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Delighted.framework; path = Delighted.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3319CBE6BF16B5B2366BDE834B663B5E /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		344868E9599A3DF0D25BED9F5799087D /* Delighted-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Delighted-dummy.m"; sourceTree = "<group>"; };
+		3547BFBA6C2FBDB078EF4D0C20A6E11B /* CSAT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CSAT.swift; path = Sources/Delighted/Classes/CSAT.swift; sourceTree = "<group>"; };
 		35ED0E33A6DD024AC0E71FEF3EA74D7C /* HTTPHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPHandler.swift; path = Sources/Framer/HTTPHandler.swift; sourceTree = "<group>"; };
+		36F9954EBE84FFC7BBAAB1BB58DF85A3 /* OptionSelect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OptionSelect.swift; path = Sources/Delighted/Classes/OptionSelect.swift; sourceTree = "<group>"; };
 		37C291A02C054326B5C6022EACD814E4 /* FrameCollector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FrameCollector.swift; path = Sources/Framer/FrameCollector.swift; sourceTree = "<group>"; };
-		38BAD8A0A339221507FA301670D8A3FA /* CES.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CES.swift; path = delighted/Classes/CES.swift; sourceTree = "<group>"; };
+		39A827B382516616FB1707A462758CD8 /* ThankYouViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThankYouViewController.swift; path = Sources/Delighted/Classes/ThankYouViewController.swift; sourceTree = "<group>"; };
+		39FFBFA6C17A6796AA048C3C5CF8F892 /* TextArea.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextArea.swift; path = Sources/Delighted/Classes/TextArea.swift; sourceTree = "<group>"; };
 		3AF39A541BA78B8472A0F9D4E3504B90 /* FoundationHTTPHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoundationHTTPHandler.swift; path = Sources/Framer/FoundationHTTPHandler.swift; sourceTree = "<group>"; };
-		3D5784865E2FEA2A6F758FF49C823A2F /* ThankYou.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThankYou.swift; path = delighted/Classes/ThankYou.swift; sourceTree = "<group>"; };
+		3C0C305F180BE9BF293326C3CC46A6A4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		3D7E34251E9353A38AC748BB94EDC575 /* FoundationTransport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoundationTransport.swift; path = Sources/Transport/FoundationTransport.swift; sourceTree = "<group>"; };
+		40363960A3CD0E48E173C51CE2159916 /* Delighted-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Delighted-dummy.m"; sourceTree = "<group>"; };
+		459E31F9B3C80AABAB6AC639440462C5 /* Stars.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stars.swift; path = Sources/Delighted/Classes/Stars.swift; sourceTree = "<group>"; };
 		48518693EC64586036D796C68BC0D929 /* Pods-delighted_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-delighted_Example-dummy.m"; sourceTree = "<group>"; };
-		4867ED14D95EA1F4F2BBC88644DD02FB /* Scale.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Scale.swift; path = delighted/Classes/Scale.swift; sourceTree = "<group>"; };
-		498325F93974849B4622008BEEE9840D /* Delighted-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Delighted-prefix.pch"; sourceTree = "<group>"; };
 		4A0925310BE76B051E1B51E7FBB37F35 /* Engine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Engine.swift; path = Sources/Engine/Engine.swift; sourceTree = "<group>"; };
 		4A1630A6ABD8793FBAD1BE86C22D46C3 /* Pods-delighted_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-delighted_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4CEAE0164E2FE52527656AFDEE09CF22 /* Pods-delighted_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-delighted_Tests-dummy.m"; sourceTree = "<group>"; };
 		4D2727BA14E02E7210DD6B547EA7D394 /* WebSocket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebSocket.swift; path = Sources/Starscream/WebSocket.swift; sourceTree = "<group>"; };
+		4E1D1B1F5FF0E2D87B256DDCDD7751D9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		4E83D175645A7AD2BCD9E471FC1CE36C /* Pods-delighted_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-delighted_Example-frameworks.sh"; sourceTree = "<group>"; };
-		4E9837E90DED7D4F3D39FBA294F6993F /* Stars.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stars.swift; path = delighted/Classes/Stars.swift; sourceTree = "<group>"; };
-		4E9DA43E949E970A40B6CAB7B193C9E1 /* Component.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Component.swift; path = delighted/Classes/Component.swift; sourceTree = "<group>"; };
 		4FC292255BA6A323D7D1C01215CC6591 /* Security.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Security.swift; path = Sources/Security/Security.swift; sourceTree = "<group>"; };
-		50EAB522F9A5E1EA73F50D2D457DB15B /* ClientEligibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClientEligibility.swift; path = delighted/Classes/ClientEligibility.swift; sourceTree = "<group>"; };
 		51B596EAD17BF647AE5CE0FAF0E50245 /* Pods-delighted_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-delighted_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		56ADCC3B462E7AE2D80872C7A66CA4A7 /* NativeEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NativeEngine.swift; path = Sources/Engine/NativeEngine.swift; sourceTree = "<group>"; };
 		56CCA8582A00BBFBC2E9AFFC1C1D53A9 /* TCPTransport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TCPTransport.swift; path = Sources/Transport/TCPTransport.swift; sourceTree = "<group>"; };
 		5831A57C2E79638C447411ED69EB6C42 /* FoundationSecurity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoundationSecurity.swift; path = Sources/Security/FoundationSecurity.swift; sourceTree = "<group>"; };
-		5B02E19D070E943C8BB7376AEFC8A61A /* SurveyRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SurveyRequest.swift; path = delighted/Classes/SurveyRequest.swift; sourceTree = "<group>"; };
-		659F4A0C211B240946ACC99C4B3A2DE1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		610DF92F83870F777AC7760C62C48C67 /* Strings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Strings.swift; path = Sources/Delighted/Classes/Strings.swift; sourceTree = "<group>"; };
 		66B06C3B94766EC0270E47B666348D04 /* Pods-delighted_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-delighted_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		66D2190084C547703B124E9083B97462 /* Delighted-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Delighted-umbrella.h"; sourceTree = "<group>"; };
+		67BF0D15F8C73CE5D7B29431270B9835 /* PMF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PMF.swift; path = Sources/Delighted/Classes/PMF.swift; sourceTree = "<group>"; };
+		6C89D2194BBFD935E8858BF36EED16C1 /* DelightedPageViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DelightedPageViewController.swift; path = Sources/Delighted/Classes/DelightedPageViewController.swift; sourceTree = "<group>"; };
 		6DDB7D794281E95F8D2968EAAD0E8289 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		709AEAF50D6CAD6A8981EA7CA6295269 /* Smileys.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Smileys.swift; path = delighted/Classes/Smileys.swift; sourceTree = "<group>"; };
-		713FE2BF3A08459D2D35ACAE46D34800 /* NPS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NPS.swift; path = delighted/Classes/NPS.swift; sourceTree = "<group>"; };
+		6FC0E41D809445F0E532544983B87C58 /* Delighted.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Delighted.modulemap; sourceTree = "<group>"; };
 		7175E21DED4337E7BBD3EF7424F315F6 /* Data+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+Extensions.swift"; path = "Sources/DataBytes/Data+Extensions.swift"; sourceTree = "<group>"; };
-		71B6D13EACC7D2E1ACAFE420B59E81E6 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = delighted/Assets/Assets.xcassets; sourceTree = "<group>"; };
-		71F07830617D756615ED715A662486F8 /* EligibilityConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EligibilityConfiguration.swift; path = delighted/Classes/EligibilityConfiguration.swift; sourceTree = "<group>"; };
-		73219D80D352F19003455397FC45C2FA /* PMF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PMF.swift; path = delighted/Classes/PMF.swift; sourceTree = "<group>"; };
-		772BF410D154D626F53606CCE70215CF /* Properties.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Properties.swift; path = delighted/Classes/Properties.swift; sourceTree = "<group>"; };
+		757BF7F33722985B05B466DA9A496537 /* Images.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Images.swift; path = Sources/Delighted/Classes/Images.swift; sourceTree = "<group>"; };
+		7E00CF131713EB2A5D555787B76DD074 /* Survey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Survey.swift; path = Sources/Delighted/Classes/Survey.swift; sourceTree = "<group>"; };
 		81F95157FC4CC8593A1B1E4607562122 /* FoundationHTTPServerHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoundationHTTPServerHandler.swift; path = Sources/Framer/FoundationHTTPServerHandler.swift; sourceTree = "<group>"; };
 		84F77756714F0B9828660EE3938F1D61 /* Pods-delighted_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-delighted_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		85C44A9AB6F12498BFC8233B9D599206 /* Starscream-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Starscream-Info.plist"; sourceTree = "<group>"; };
-		86CCC31253C7DDED8E9A77F1C4B46F04 /* CloseButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CloseButton.swift; path = delighted/Classes/CloseButton.swift; sourceTree = "<group>"; };
-		881F24BA300786144E57F404B583E054 /* SurveyViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SurveyViewController.swift; path = delighted/Classes/SurveyViewController.swift; sourceTree = "<group>"; };
 		891B2270823847ED23F2ECFC28F935EC /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Starscream.framework; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8965288ED882E6E7185104FB2CF4FAFC /* ThankYouViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThankYouViewController.swift; path = delighted/Classes/ThankYouViewController.swift; sourceTree = "<group>"; };
 		8A00BEC8C8A1AC84D39B2EE3DA4AEF17 /* Pods-delighted_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-delighted_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		8C545FE6F9B7B409F28F48F7BC9177C3 /* Pods_delighted_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_delighted_Example.framework; path = "Pods-delighted_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8DC3B9E3CAFA65FF9A4FD43588A21CB7 /* CSAT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CSAT.swift; path = delighted/Classes/CSAT.swift; sourceTree = "<group>"; };
 		8ED9AF7BDFE0F03CE129D72D85FCA460 /* WSEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WSEngine.swift; path = Sources/Engine/WSEngine.swift; sourceTree = "<group>"; };
-		9210367A799B89919A4EE240CFE6B580 /* Version.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Version.swift; path = delighted/Classes/Version.swift; sourceTree = "<group>"; };
 		9357D61506695B4EDB5014C06BE56A43 /* Starscream.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Starscream.modulemap; sourceTree = "<group>"; };
+		9383C5CE5B8D39AAAF8D775DB33E9F75 /* Properties.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Properties.swift; path = Sources/Delighted/Classes/Properties.swift; sourceTree = "<group>"; };
 		970E69D1238BE9393BE1503C7CAA8F40 /* Pods-delighted_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-delighted_Example-umbrella.h"; sourceTree = "<group>"; };
+		98A22BB053BD7DCFA7081E5AB904341C /* Pusher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Pusher.swift; path = Sources/Delighted/Classes/Pusher.swift; sourceTree = "<group>"; };
+		9A810B8B69B7692B9103B105F42E9FF4 /* PoweredBy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PoweredBy.swift; path = Sources/Delighted/Classes/PoweredBy.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E2093F2739C102485A407F91B0A1DEB /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Sources/Delighted/Assets/Assets.xcassets; sourceTree = "<group>"; };
 		A10549307746CCAFF95041E23D309D3B /* Pods_delighted_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_delighted_Tests.framework; path = "Pods-delighted_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1523C1A379C5440ACBDCD3EEE27337A /* ResourceBundle-Delighted_Delighted-Delighted-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Delighted_Delighted-Delighted-Info.plist"; sourceTree = "<group>"; };
 		A2EAFCD04DEECC2AC6B8727048A80617 /* Compression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Compression.swift; path = Sources/Compression/Compression.swift; sourceTree = "<group>"; };
-		A36F2C9A1C44EFEEAD784006EA9338D6 /* Delighted.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Delighted.release.xcconfig; sourceTree = "<group>"; };
+		A6022319110D7125F1F25784863E380D /* Thumbs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Thumbs.swift; path = Sources/Delighted/Classes/Thumbs.swift; sourceTree = "<group>"; };
 		A62AC07A9271D8996F97CC35856BA647 /* WebSocketServer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebSocketServer.swift; path = Sources/Server/WebSocketServer.swift; sourceTree = "<group>"; };
-		AC7DBEE7887FE4F2D4614FC9AAC5575D /* Images.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Images.swift; path = delighted/Classes/Images.swift; sourceTree = "<group>"; };
-		AD3E3181946E90E97565FA471A6E5B6C /* Haptic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Haptic.swift; path = delighted/Classes/Haptic.swift; sourceTree = "<group>"; };
+		A81F92E59A4B9112A535A411D7029279 /* Person.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Person.swift; path = Sources/Delighted/Classes/Person.swift; sourceTree = "<group>"; };
 		B5328221AB0573334062F860B369BA92 /* Pods-delighted_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-delighted_Example-Info.plist"; sourceTree = "<group>"; };
-		B98B2273EE2BF3431B6AA0BD4AB07676 /* Pusher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Pusher.swift; path = delighted/Classes/Pusher.swift; sourceTree = "<group>"; };
+		B73A5E9CC7BE8B97F4C398772AF89D4B /* SurveyResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SurveyResponse.swift; path = Sources/Delighted/Classes/SurveyResponse.swift; sourceTree = "<group>"; };
+		B7F1761BF449C48B98B7F500D143C1E5 /* Delighted.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Delighted.debug.xcconfig; sourceTree = "<group>"; };
 		B9F5A8743503E9F24E5D358E04E6A814 /* Delighted_Delighted.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Delighted_Delighted.bundle; path = "Delighted-Delighted_Delighted.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BCD39996BFF76E47EBCB05B4C77A20DD /* Survey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Survey.swift; path = delighted/Classes/Survey.swift; sourceTree = "<group>"; };
-		BCF7880745C967CEAD432603744F76C4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		BC2E05EE27695C97786FD129E4284EA5 /* Delighted.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Delighted.swift; path = Sources/Delighted/Classes/Delighted.swift; sourceTree = "<group>"; };
 		BD981FA237605D9B2896349C82C7727E /* Pods-delighted_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-delighted_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BE0DE83576C9C9F8108DD32513EFE938 /* Version.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Version.swift; path = Sources/Delighted/Classes/Version.swift; sourceTree = "<group>"; };
 		BE2229C7DD75AE85B4A353B7973AF315 /* Pods-delighted_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-delighted_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		C6461018E10C74B24967F540043E6DF5 /* DelightedPageViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DelightedPageViewController.swift; path = delighted/Classes/DelightedPageViewController.swift; sourceTree = "<group>"; };
-		C77998B15271EF23DCA4BFF36F13644C /* Delighted.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Delighted.modulemap; sourceTree = "<group>"; };
+		BF1C1B004127D9E52245A16150A4B6AD /* EligibilityConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EligibilityConfiguration.swift; path = Sources/Delighted/Classes/EligibilityConfiguration.swift; sourceTree = "<group>"; };
+		C85298E079B9BC7461BF0E7880A5DB96 /* Delighted-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Delighted-Info.plist"; sourceTree = "<group>"; };
 		C9C8BC22AA74FEDA9CF44852D28F68A4 /* Transport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Transport.swift; path = Sources/Transport/Transport.swift; sourceTree = "<group>"; };
-		CCE549D6286A3446F727A2CDB3AA0D6E /* OptionSelect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OptionSelect.swift; path = delighted/Classes/OptionSelect.swift; sourceTree = "<group>"; };
-		CD8D61B1BEFB2FA34E84BC551FB190D7 /* Delighted.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Delighted.swift; path = delighted/Classes/Delighted.swift; sourceTree = "<group>"; };
-		CEAC1790EB173C703715816E08F8BA7C /* AdditionalQuestionViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AdditionalQuestionViewController.swift; path = delighted/Classes/AdditionalQuestionViewController.swift; sourceTree = "<group>"; };
-		D05E4549C56A665FACF96CCC2440EE2C /* Colors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = delighted/Classes/Colors.swift; sourceTree = "<group>"; };
+		CDA3439F81BFAA43B8E0255729F2F30C /* SurveyConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SurveyConfiguration.swift; path = Sources/Delighted/Classes/SurveyConfiguration.swift; sourceTree = "<group>"; };
+		CEDA9932800B42F57BCD87C70000E6EE /* Delighted.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Delighted.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CFE0ED4E3C3B8182DFF90F789E0252F8 /* ViewLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewLayout.swift; path = Sources/Delighted/Classes/ViewLayout.swift; sourceTree = "<group>"; };
+		D46D852CFE65D327940C3FF1D20E2C21 /* Smileys.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Smileys.swift; path = Sources/Delighted/Classes/Smileys.swift; sourceTree = "<group>"; };
 		D59CBE10DDABEF2DDE91C5B306702BB3 /* Pods-delighted_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-delighted_Example.modulemap"; sourceTree = "<group>"; };
-		D87C55ED3E6226D1A919D954FEC4A494 /* PoweredBy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PoweredBy.swift; path = delighted/Classes/PoweredBy.swift; sourceTree = "<group>"; };
+		D9C883E02B51D1464AE3E4ECECF0E8D3 /* Button.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Button.swift; path = Sources/Delighted/Classes/Button.swift; sourceTree = "<group>"; };
 		DEA0B1D4B496D6252915F87FB58B5C48 /* Pods-delighted_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-delighted_Tests-umbrella.h"; sourceTree = "<group>"; };
 		DFD212064ED1CC47B2560F6E20526B3B /* Server.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Server.swift; path = Sources/Server/Server.swift; sourceTree = "<group>"; };
+		E1D64A5A3404682B908E237A75D546A8 /* Delighted-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Delighted-prefix.pch"; sourceTree = "<group>"; };
 		E6B8353DB672E6C84ABAF6B044BC47F3 /* Starscream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Starscream.release.xcconfig; sourceTree = "<group>"; };
+		E9BAE53627958A7A80B2A623938D3869 /* Theme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Theme.swift; path = Sources/Delighted/Classes/Theme.swift; sourceTree = "<group>"; };
 		ECFB158E08A6502A38761C96CB68975B /* Starscream-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Starscream-umbrella.h"; sourceTree = "<group>"; };
+		EE564D55B5D9D54F15C14FE4DF2FD103 /* SurveyRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SurveyRequest.swift; path = Sources/Delighted/Classes/SurveyRequest.swift; sourceTree = "<group>"; };
+		EEEA10DB02B970C13E0B9B93F125229A /* API.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = API.swift; path = Sources/Delighted/Classes/API.swift; sourceTree = "<group>"; };
+		F1958B81C50A345298D47C24215444BA /* ClientEligibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClientEligibility.swift; path = Sources/Delighted/Classes/ClientEligibility.swift; sourceTree = "<group>"; };
+		F2D5AF0E92D5DCD42447610557BC8225 /* Scale.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Scale.swift; path = Sources/Delighted/Classes/Scale.swift; sourceTree = "<group>"; };
+		F79A6A34EF896148000FF164649EE279 /* ThankYou.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThankYou.swift; path = Sources/Delighted/Classes/ThankYou.swift; sourceTree = "<group>"; };
 		F91DB6CA597FEAECA22CC0F8127540AA /* Pods-delighted_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-delighted_Tests-Info.plist"; sourceTree = "<group>"; };
+		FAC104338FAA1457B039D3B56432B036 /* CES.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CES.swift; path = Sources/Delighted/Classes/CES.swift; sourceTree = "<group>"; };
 		FDEBA80CA6DFBD6E68CBFCF461CB0BF7 /* Pods-delighted_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-delighted_Tests.modulemap"; sourceTree = "<group>"; };
-		FE1BC775A82ACF664B9A8FA6982B2B07 /* Delighted-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Delighted-Info.plist"; sourceTree = "<group>"; };
-		FE7982EEDA3E858F598EDB6B4D8E1654 /* Theme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Theme.swift; path = delighted/Classes/Theme.swift; sourceTree = "<group>"; };
-		FFF01F403B2EC2FC984B84DEE3EA7CFD /* Strings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Strings.swift; path = delighted/Classes/Strings.swift; sourceTree = "<group>"; };
+		FF4F145444B99178B9FA3E628244592C /* ResourceBundle-Delighted_Delighted-Delighted-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Delighted_Delighted-Delighted-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,12 +279,12 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		59FD3DFD9A3F3F7C6D359435F6060AEE /* Pod */ = {
+		0763DE085799C668A851040D70E05C44 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				2F719D63A227773A7689E5DA43857B7F /* Delighted.podspec */,
-				659F4A0C211B240946ACC99C4B3A2DE1 /* LICENSE */,
-				BCF7880745C967CEAD432603744F76C4 /* README.md */,
+				CEDA9932800B42F57BCD87C70000E6EE /* Delighted.podspec */,
+				4E1D1B1F5FF0E2D87B256DDCDD7751D9 /* LICENSE */,
+				3C0C305F180BE9BF293326C3CC46A6A4 /* README.md */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
@@ -311,6 +311,22 @@
 			);
 			name = "Pods-delighted_Tests";
 			path = "Target Support Files/Pods-delighted_Tests";
+			sourceTree = "<group>";
+		};
+		701134F12CF522E2D990831689D398D9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6FC0E41D809445F0E532544983B87C58 /* Delighted.modulemap */,
+				40363960A3CD0E48E173C51CE2159916 /* Delighted-dummy.m */,
+				C85298E079B9BC7461BF0E7880A5DB96 /* Delighted-Info.plist */,
+				E1D64A5A3404682B908E237A75D546A8 /* Delighted-prefix.pch */,
+				2B982CB441D657A9808F97B566B135D0 /* Delighted-umbrella.h */,
+				B7F1761BF449C48B98B7F500D143C1E5 /* Delighted.debug.xcconfig */,
+				1472CFD307E63C54F8925FA06E5AF2A5 /* Delighted.release.xcconfig */,
+				FF4F145444B99178B9FA3E628244592C /* ResourceBundle-Delighted_Delighted-Delighted-Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Delighted";
 			sourceTree = "<group>";
 		};
 		7629874EBAAE6E64DF87ACB68FB5A08E /* Starscream */ = {
@@ -340,6 +356,56 @@
 			);
 			name = Starscream;
 			path = Starscream;
+			sourceTree = "<group>";
+		};
+		89A3604872088D05C3771BB27DFB61D3 /* Delighted */ = {
+			isa = PBXGroup;
+			children = (
+				2265D0BE76A6EFF977D72774BB5881BB /* AdditionalQuestionViewController.swift */,
+				EEEA10DB02B970C13E0B9B93F125229A /* API.swift */,
+				9E2093F2739C102485A407F91B0A1DEB /* Assets.xcassets */,
+				D9C883E02B51D1464AE3E4ECECF0E8D3 /* Button.swift */,
+				FAC104338FAA1457B039D3B56432B036 /* CES.swift */,
+				F1958B81C50A345298D47C24215444BA /* ClientEligibility.swift */,
+				32F1DC91A18101381D7B73CF73FCE431 /* CloseButton.swift */,
+				18775BB06A49C93B824560B646F2344A /* Colors.swift */,
+				1BACE03DB20B374BB7CFAE0A8721695E /* Component.swift */,
+				3547BFBA6C2FBDB078EF4D0C20A6E11B /* CSAT.swift */,
+				30DE6C2CE591FCBB8B3FD67C31919ED1 /* CSAT3.swift */,
+				BC2E05EE27695C97786FD129E4284EA5 /* Delighted.swift */,
+				6C89D2194BBFD935E8858BF36EED16C1 /* DelightedPageViewController.swift */,
+				BF1C1B004127D9E52245A16150A4B6AD /* EligibilityConfiguration.swift */,
+				2231D3E5EA22E5E825452508CBE924B8 /* Haptic.swift */,
+				757BF7F33722985B05B466DA9A496537 /* Images.swift */,
+				3207643A4EFCA34F0E83C02D059D88B1 /* NPS.swift */,
+				36F9954EBE84FFC7BBAAB1BB58DF85A3 /* OptionSelect.swift */,
+				A81F92E59A4B9112A535A411D7029279 /* Person.swift */,
+				67BF0D15F8C73CE5D7B29431270B9835 /* PMF.swift */,
+				9A810B8B69B7692B9103B105F42E9FF4 /* PoweredBy.swift */,
+				9383C5CE5B8D39AAAF8D775DB33E9F75 /* Properties.swift */,
+				98A22BB053BD7DCFA7081E5AB904341C /* Pusher.swift */,
+				F2D5AF0E92D5DCD42447610557BC8225 /* Scale.swift */,
+				D46D852CFE65D327940C3FF1D20E2C21 /* Smileys.swift */,
+				459E31F9B3C80AABAB6AC639440462C5 /* Stars.swift */,
+				610DF92F83870F777AC7760C62C48C67 /* Strings.swift */,
+				7E00CF131713EB2A5D555787B76DD074 /* Survey.swift */,
+				CDA3439F81BFAA43B8E0255729F2F30C /* SurveyConfiguration.swift */,
+				EE564D55B5D9D54F15C14FE4DF2FD103 /* SurveyRequest.swift */,
+				B73A5E9CC7BE8B97F4C398772AF89D4B /* SurveyResponse.swift */,
+				03FEDFB68571CA550A5542395DDE1956 /* SurveySession.swift */,
+				324E9A9AD3FFF16DFB4DC5E6D036C318 /* SurveyViewController.swift */,
+				39FFBFA6C17A6796AA048C3C5CF8F892 /* TextArea.swift */,
+				F79A6A34EF896148000FF164649EE279 /* ThankYou.swift */,
+				39A827B382516616FB1707A462758CD8 /* ThankYouViewController.swift */,
+				E9BAE53627958A7A80B2A623938D3869 /* Theme.swift */,
+				A6022319110D7125F1F25784863E380D /* Thumbs.swift */,
+				BE0DE83576C9C9F8108DD32513EFE938 /* Version.swift */,
+				CFE0ED4E3C3B8182DFF90F789E0252F8 /* ViewLayout.swift */,
+				0763DE085799C668A851040D70E05C44 /* Pod */,
+				701134F12CF522E2D990831689D398D9 /* Support Files */,
+			);
+			name = Delighted;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		8B6242028BE04B793AD2387343DA99C7 /* Pods-delighted_Example */ = {
@@ -378,72 +444,6 @@
 				891B2270823847ED23F2ECFC28F935EC /* Starscream.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		A4262D6DC1C1C56FB8292C0C7D8C19BB /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C77998B15271EF23DCA4BFF36F13644C /* Delighted.modulemap */,
-				344868E9599A3DF0D25BED9F5799087D /* Delighted-dummy.m */,
-				FE1BC775A82ACF664B9A8FA6982B2B07 /* Delighted-Info.plist */,
-				498325F93974849B4622008BEEE9840D /* Delighted-prefix.pch */,
-				66D2190084C547703B124E9083B97462 /* Delighted-umbrella.h */,
-				1DDE1774C197F7FCFFB8EA8413518646 /* Delighted.debug.xcconfig */,
-				A36F2C9A1C44EFEEAD784006EA9338D6 /* Delighted.release.xcconfig */,
-				A1523C1A379C5440ACBDCD3EEE27337A /* ResourceBundle-Delighted_Delighted-Delighted-Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/Delighted";
-			sourceTree = "<group>";
-		};
-		AAB12234764E2BC6A641A309F61DADB5 /* Delighted */ = {
-			isa = PBXGroup;
-			children = (
-				CEAC1790EB173C703715816E08F8BA7C /* AdditionalQuestionViewController.swift */,
-				09C649A0C9DCD93C5C8D29B5BF8BC5B5 /* API.swift */,
-				71B6D13EACC7D2E1ACAFE420B59E81E6 /* Assets.xcassets */,
-				10EA73453F1945F65B59DE096A0452D4 /* Button.swift */,
-				38BAD8A0A339221507FA301670D8A3FA /* CES.swift */,
-				50EAB522F9A5E1EA73F50D2D457DB15B /* ClientEligibility.swift */,
-				86CCC31253C7DDED8E9A77F1C4B46F04 /* CloseButton.swift */,
-				D05E4549C56A665FACF96CCC2440EE2C /* Colors.swift */,
-				4E9DA43E949E970A40B6CAB7B193C9E1 /* Component.swift */,
-				8DC3B9E3CAFA65FF9A4FD43588A21CB7 /* CSAT.swift */,
-				292950FDBF98D228C887AE7FE3B019DD /* CSAT3.swift */,
-				CD8D61B1BEFB2FA34E84BC551FB190D7 /* Delighted.swift */,
-				C6461018E10C74B24967F540043E6DF5 /* DelightedPageViewController.swift */,
-				71F07830617D756615ED715A662486F8 /* EligibilityConfiguration.swift */,
-				AD3E3181946E90E97565FA471A6E5B6C /* Haptic.swift */,
-				AC7DBEE7887FE4F2D4614FC9AAC5575D /* Images.swift */,
-				713FE2BF3A08459D2D35ACAE46D34800 /* NPS.swift */,
-				CCE549D6286A3446F727A2CDB3AA0D6E /* OptionSelect.swift */,
-				12793922154015A99457687235F7A11A /* Person.swift */,
-				73219D80D352F19003455397FC45C2FA /* PMF.swift */,
-				D87C55ED3E6226D1A919D954FEC4A494 /* PoweredBy.swift */,
-				772BF410D154D626F53606CCE70215CF /* Properties.swift */,
-				B98B2273EE2BF3431B6AA0BD4AB07676 /* Pusher.swift */,
-				4867ED14D95EA1F4F2BBC88644DD02FB /* Scale.swift */,
-				709AEAF50D6CAD6A8981EA7CA6295269 /* Smileys.swift */,
-				4E9837E90DED7D4F3D39FBA294F6993F /* Stars.swift */,
-				FFF01F403B2EC2FC984B84DEE3EA7CFD /* Strings.swift */,
-				BCD39996BFF76E47EBCB05B4C77A20DD /* Survey.swift */,
-				0C0B9A147DE8E60031F923BD72DE788F /* SurveyConfiguration.swift */,
-				5B02E19D070E943C8BB7376AEFC8A61A /* SurveyRequest.swift */,
-				1278AEEF8A3718D92B2A0575682394FA /* SurveyResponse.swift */,
-				1E5A98C47BB74751A3505D793B27F1EC /* SurveySession.swift */,
-				881F24BA300786144E57F404B583E054 /* SurveyViewController.swift */,
-				186B37DE0F1226EC093EDE8DAFF4125B /* TextArea.swift */,
-				3D5784865E2FEA2A6F758FF49C823A2F /* ThankYou.swift */,
-				8965288ED882E6E7185104FB2CF4FAFC /* ThankYouViewController.swift */,
-				FE7982EEDA3E858F598EDB6B4D8E1654 /* Theme.swift */,
-				09B6C107DDCDF37F817A6FC2B2CC7B6B /* Thumbs.swift */,
-				9210367A799B89919A4EE240CFE6B580 /* Version.swift */,
-				0B05DECB7B2E377873934360C1EC7169 /* ViewLayout.swift */,
-				59FD3DFD9A3F3F7C6D359435F6060AEE /* Pod */,
-				A4262D6DC1C1C56FB8292C0C7D8C19BB /* Support Files */,
-			);
-			name = Delighted;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		C34F19E6E210C87A192216575C48E771 /* Support Files */ = {
@@ -485,7 +485,7 @@
 		DD6FFBCD02F074F1423C5AFACEDA93DD /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AAB12234764E2BC6A641A309F61DADB5 /* Delighted */,
+				89A3604872088D05C3771BB27DFB61D3 /* Delighted */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -673,7 +673,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76D139E4079466A97ACEC81CB789A87B /* Assets.xcassets in Resources */,
+				E8ED726D441D61CFCE3DD6D92161B596 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -749,46 +749,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				112B271652162678FB9ABB37656B02DE /* AdditionalQuestionViewController.swift in Sources */,
-				23D6013D34AA7D8B146679BC9CBE9040 /* API.swift in Sources */,
-				B3CD4C2EDB3D9AFAC150EEF6819CAD84 /* Button.swift in Sources */,
-				449F45F7C153D27E710847DC82BABAF2 /* CES.swift in Sources */,
-				DA1F0869404AB37606EA0D3D8346EE39 /* ClientEligibility.swift in Sources */,
-				999F4B3FA0A685694DBAB561C05B3D9B /* CloseButton.swift in Sources */,
-				145DC06AC48938E673DB11317EEB6FA6 /* Colors.swift in Sources */,
-				3AACCCC8CA8175E189A2F0547C2E50CA /* Component.swift in Sources */,
-				F58C82B61E010DF983D864C489DF3DAE /* CSAT.swift in Sources */,
-				377F60D5C1A5033333F78DA6359291F1 /* CSAT3.swift in Sources */,
+				0E285FD8B67C9C79857144F57F0DBD72 /* AdditionalQuestionViewController.swift in Sources */,
+				320099B542B2A48BB8F66A20EB7B93C6 /* API.swift in Sources */,
+				30BA06D6C4E81146D381C21307A059C3 /* Button.swift in Sources */,
+				F50D804889D80D975271C995A03F9DCC /* CES.swift in Sources */,
+				308170A34A3C1E5C37038F59577DA94F /* ClientEligibility.swift in Sources */,
+				3871187ECD202F28C7D140F0FEE31565 /* CloseButton.swift in Sources */,
+				FB05854CAE8D841E974ABE8AB615AD91 /* Colors.swift in Sources */,
+				3ACF30E4D9C3B6242FDA307DA1C6BA59 /* Component.swift in Sources */,
+				6A52DA764DC4054977A8F9573047589B /* CSAT.swift in Sources */,
+				C0546C8DD0C58F4F5219346F8D4E7564 /* CSAT3.swift in Sources */,
 				4A2E412348768725B48B30108A967491 /* Delighted-dummy.m in Sources */,
-				E1E29196738DC8F95B186D9150626F17 /* Delighted.swift in Sources */,
-				13338D1518975D266436EE6ED1FD018B /* DelightedPageViewController.swift in Sources */,
-				2C0AF40F41BB01D6B943D2BFCEAA5AEE /* EligibilityConfiguration.swift in Sources */,
-				69FB5AB7C18231DD83ED5950084B3133 /* Haptic.swift in Sources */,
-				325C9461A8DFD0E5E31927BE04A022EB /* Images.swift in Sources */,
-				21154C9EC36E4D957DBD954845EFAF5B /* NPS.swift in Sources */,
-				6DD074C70DC5E7942DCB4C5F8C17CC3E /* OptionSelect.swift in Sources */,
-				0B706A9DB9140BBD6D9A2BC2D86E3F3C /* Person.swift in Sources */,
-				417016E5C8127BF0D346F5BDD22F1B3C /* PMF.swift in Sources */,
-				EDFD5D8F98552C59D46BC0D570C17FA8 /* PoweredBy.swift in Sources */,
-				321D6E1548F136A8E7838A66EDF42675 /* Properties.swift in Sources */,
-				5AF5F17C3E0326EC0AC8532BC9A9B9FF /* Pusher.swift in Sources */,
-				F8ECF3F987003C90CA2BF15DE855D1A2 /* Scale.swift in Sources */,
-				40BCCD23A6BAF21F962716D3BCB48C7F /* Smileys.swift in Sources */,
-				8D90371237E256B70433C782D3FB3AB5 /* Stars.swift in Sources */,
-				77C8544DFC80EA29BBFF727A200C03BD /* Strings.swift in Sources */,
-				BAF2F5ABDB73D30269CEDCBB0F56BA93 /* Survey.swift in Sources */,
-				A9D74DFBC6D402159FEAC1A7310C7AC3 /* SurveyConfiguration.swift in Sources */,
-				D16D3C2F4B525ED22DEA34D55DF85DFD /* SurveyRequest.swift in Sources */,
-				2DFD1CCEB2674E37C4C0FD0846CC1AC0 /* SurveyResponse.swift in Sources */,
-				C1E0626659E661E3DFF59C815848D65A /* SurveySession.swift in Sources */,
-				7DF6ED8E8746B8C9781AFA689D45374C /* SurveyViewController.swift in Sources */,
-				461221D76E8F9F801F92DB169ECE84D6 /* TextArea.swift in Sources */,
-				E3A717628C066B0E146324D7878F5E86 /* ThankYou.swift in Sources */,
-				2D5005941493819867F5398B9574ED0D /* ThankYouViewController.swift in Sources */,
-				94C4D02D1488CE99CC72FD3F1440A326 /* Theme.swift in Sources */,
-				DE2FE44B27096E4E33BB786A5254AC51 /* Thumbs.swift in Sources */,
-				0BDA17E42811D0B92AF6C3F36D950F8B /* Version.swift in Sources */,
-				B59E12CE665854463E5C175E011E482D /* ViewLayout.swift in Sources */,
+				7402F2C8319BED5B6900EDEE27196A08 /* Delighted.swift in Sources */,
+				891F6DB4B5D34083A3EF01022CA5F2D5 /* DelightedPageViewController.swift in Sources */,
+				6089E070F8C1C4DD0C0E5C1EDC2829EC /* EligibilityConfiguration.swift in Sources */,
+				A04C5960EE8DB02DEBC8F9F7579DAA04 /* Haptic.swift in Sources */,
+				C05633B54CC9424F8EF0CE4AB6242DA4 /* Images.swift in Sources */,
+				5F5DDAAC8B7036AF53C07871E7E3576E /* NPS.swift in Sources */,
+				F08E4C48509EFF306831E50223697819 /* OptionSelect.swift in Sources */,
+				7332DBCEE73C682970602D36D36FEDFA /* Person.swift in Sources */,
+				4AF936E0F0E93CFBEB5E7B4F2FA4FC5A /* PMF.swift in Sources */,
+				787B48A86FEAD9B8A849E9B621129D3C /* PoweredBy.swift in Sources */,
+				93232A340B396160DBEBF61303A30978 /* Properties.swift in Sources */,
+				3FB38EDD1DB315A857D44DF0945AC2D8 /* Pusher.swift in Sources */,
+				87FD6A8EA0B2CC2197D2C2F3FCD0C3EC /* Scale.swift in Sources */,
+				E4A326BB8AB2B013504B9E4934FCD036 /* Smileys.swift in Sources */,
+				4DD7AA0FC0BF9888B45DB17C6C9A17BC /* Stars.swift in Sources */,
+				82F9F6B63B2B3CD92C5891D3548E65C3 /* Strings.swift in Sources */,
+				BC31FA16617669F58B48883745A715E7 /* Survey.swift in Sources */,
+				EF2584C53629EDF545B6879D9AE6C28B /* SurveyConfiguration.swift in Sources */,
+				D844FA5803A1FE263FFC47879CC142A1 /* SurveyRequest.swift in Sources */,
+				DEE38A6A36E3B48813E9B84F105FA122 /* SurveyResponse.swift in Sources */,
+				7322F36730EDD79F035675B76F7F2243 /* SurveySession.swift in Sources */,
+				3DA265E35459456AE5603FC7266B80FB /* SurveyViewController.swift in Sources */,
+				1E2A5F63171FF16550B05DFDDCB8C000 /* TextArea.swift in Sources */,
+				0ACB450A3F5C9090D6D7F77D8A1322A0 /* ThankYou.swift in Sources */,
+				A3701C82DDF496D2A2A38BD1322ADDA6 /* ThankYouViewController.swift in Sources */,
+				36574177050AED36E899603733A4E5C5 /* Theme.swift in Sources */,
+				F243349CE97B2FFA729A30CA72BF65B0 /* Thumbs.swift in Sources */,
+				A06FDA818E25AA2E2CC79B80CD2FF741 /* Version.swift in Sources */,
+				B64AD04B982D145C487C8A9AC000D055 /* ViewLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1032,7 +1032,7 @@
 		};
 		7AFD26F9BC167E551F6506E62DA237C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1DDE1774C197F7FCFFB8EA8413518646 /* Delighted.debug.xcconfig */;
+			baseConfigurationReference = B7F1761BF449C48B98B7F500D143C1E5 /* Delighted.debug.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Delighted";
 				IBSC_MODULE = Delighted;
@@ -1048,7 +1048,7 @@
 		};
 		923A1BEEC1D871DFF24D110E6811E356 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A36F2C9A1C44EFEEAD784006EA9338D6 /* Delighted.release.xcconfig */;
+			baseConfigurationReference = 1472CFD307E63C54F8925FA06E5AF2A5 /* Delighted.release.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Delighted";
 				IBSC_MODULE = Delighted;
@@ -1098,7 +1098,7 @@
 		};
 		C0A7DFF57418B47EC7E0216E7507E376 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A36F2C9A1C44EFEEAD784006EA9338D6 /* Delighted.release.xcconfig */;
+			baseConfigurationReference = 1472CFD307E63C54F8925FA06E5AF2A5 /* Delighted.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1224,7 +1224,7 @@
 		};
 		F116919409B13775AC04E3236F45106A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1DDE1774C197F7FCFFB8EA8413518646 /* Delighted.debug.xcconfig */;
+			baseConfigurationReference = B7F1761BF449C48B98B7F500D143C1E5 /* Delighted.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
