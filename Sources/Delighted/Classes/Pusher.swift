@@ -1,4 +1,5 @@
 import Starscream
+import Foundation
 
 private let encoder: JSONEncoder = {
     let encoder = JSONEncoder()

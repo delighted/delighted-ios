@@ -24,7 +24,9 @@ The SDK has a dependency on
 ## Installation
 
 We recommend installing the Delighted iOS SDK using a package manager such as
-[CocoaPods](https://cocoapods.org) or [Carthage](https://github.com/Carthage/Carthage).
+[CocoaPods](https://cocoapods.org),
+[Carthage](https://github.com/Carthage/Carthage), or [Swift Package
+Manager](https://www.swift.org/package-manager/).
 
 ### CocoaPods
 
@@ -55,6 +57,13 @@ your `Cartfile`:
 ```
 github "delighted/delighted-ios" >= 1.3.0
 ```
+
+### Swift Package Manager
+
+[Add a package
+dependency](https://developer.apple.com/documentation/swift_packages/adding_package_dependencies_to_your_app)
+to your XCode project using the URL of this repository
+(`https://github.com/delighted/delighted-ios`).
 
 ## Getting started
 

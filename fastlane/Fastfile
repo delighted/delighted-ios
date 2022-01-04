@@ -10,7 +10,7 @@ platform :ios do
     UI.important("Current version: #{version}")
     new_version = UI.input("New version?")
 
-    files = ['../delighted.podspec', '../delighted/Classes/Version.swift']
+    files = ['../delighted.podspec', '../Sources/Delighted/Classes/Version.swift']
     files.each do |file|
       text = File.read(file)
       new_contents = text.gsub(/#{version}/, new_version)

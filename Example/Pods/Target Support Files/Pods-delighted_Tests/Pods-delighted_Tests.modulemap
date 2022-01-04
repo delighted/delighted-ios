@@ -1,0 +1,6 @@
+framework module Pods_delighted_Tests {
+  umbrella header "Pods-delighted_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
