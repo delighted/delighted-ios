@@ -72,7 +72,7 @@ has been initialized you can call `survey(...)` anywhere you want to present a
 survey. 
 
 Before showing a survey we’ll confirm that the Mobile SDK platform is enabled
-for your project and check that the person hasn’t been recently surveyed, among
+for your template and check that the person hasn’t been recently surveyed, among
 other things. We also automatically manage your survey’s sampling to ensure you
 receive a steady flow of feedback, as opposed to going through your entire plan
 volume in one day. Consequently, a call to `survey(...)` will not always result
@@ -195,7 +195,7 @@ You can find your Delighted ID at https://delighted.com/integrations/mobile_sdk.
 The Delighted ID is considered public and can be treated like any other
 configuration setting in your app. 
 
-If you have multiple projects, each project will have its own unique ID. This
+If you have multiple templates, each template will have its own unique ID. This
 allows you to include multiple surveys in your app.
 
 ### Examples
@@ -324,7 +324,7 @@ Please reach out to Delighted’s [Customer Concierge](hello@delighted.com) team
 if you would like to change any of the other settings.
 
 Alternatively, you can control the appearance of the survey in your own code.
-The values you provide take precedence over your Delighted project’s
+The values you provide take precedence over your Delighted template's
 configuration. If you opt to describe the settings through code you will need to
 provide values for all theme settings. We encourage you to reach out to
 Delighted’s [Customer Concierge](hello@delighted.com) team to help you evaluate
