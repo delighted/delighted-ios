@@ -324,7 +324,7 @@ Please reach out to Delighted’s [Customer Concierge](hello@delighted.com) team
 if you would like to change any of the other settings.
 
 Alternatively, you can control the appearance of the survey in your own code.
-The values you provide take precedence over your Delighted template's
+The values you provide take precedence over your Delighted template’s
 configuration. If you opt to describe the settings through code you will need to
 provide values for all theme settings. We encourage you to reach out to
 Delighted’s [Customer Concierge](hello@delighted.com) team to help you evaluate
