@@ -6,9 +6,9 @@ Pod::Spec.new do |spec|
   spec.summary               = "Build native mobile app surveys for iOS using the Delighted SDK."
   spec.description           = "Build your feedback program directly into your iOS apps using Delighted’s iOS SDK. Delighted’s seamless, user-focused survey experience, reimagined for iPhone."
   spec.homepage              = "https://github.com/delighted/delighted-ios"
-  spec.author                = { "Delighted": "hello@delighted.com" }
+  spec.author                = { "Delighted" => "hello@delighted.com" }
   spec.license               = { file: "LICENSE" }
-  spec.ios.deployment_target = "12.1"
+  spec.ios.deployment_target = "15.0"
   spec.source                = { git: "https://github.com/delighted/delighted-ios.git", tag: "#{spec.version}" }
   spec.module_name           = "Delighted"
   spec.swift_version         = "5.0"
