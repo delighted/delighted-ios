@@ -32,6 +32,7 @@ platform :ios do
     )
 
     github_release = set_github_release(
+      repository_name: "delighted/delighted-ios",
       name: version,
       tag_name: version,
       description: changelog,
