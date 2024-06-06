@@ -1,7 +1,7 @@
 use_frameworks!
 
 target 'delighted_Example' do
-  platform :ios, '12.1'
+  platform :ios, '15.0'
 
   pod 'Delighted', :path => '../'
 
