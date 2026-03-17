@@ -35,6 +35,7 @@ import UIKit
     }
 
     @objc public static func initializeSDK() {
+        print("[Delighted] WARNING: Delighted is being sunset on June 30, 2026. This SDK is deprecated and will no longer be maintained or receive updates. For more information, visit the Delighted Sunset FAQ: https://help.delighted.com/article/840-delighted-sunset-faq")
         Logger.log(.info, "init")
         RequestCache.retryAll()
     }
@@ -48,6 +49,7 @@ import UIKit
         eligibilityOverrides: EligibilityOverrides? = nil,
         inViewController userViewController: UIViewController? = nil
     ) {
+        print("[Delighted] WARNING: Delighted is being sunset on June 30, 2026. This SDK is deprecated and will stop functioning after the sunset date. Visit: https://help.delighted.com/article/840-delighted-sunset-faq")
         survey(
             delightedID:
             delightedID,
